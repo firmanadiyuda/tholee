@@ -17,12 +17,12 @@
         <div id="projects">
             <div v-for="project in projects" :key="project.judul" class="hero bg-secondary text-center md:text-left">
                 <div class="hero-content flex-col md:flex-row py-20 lg:px-10 gap-10 z-40 border-b-accent/10 border-b-2">
-                    <iframe height="215" :src="project.url" class="w-full sm:w-[420px] shadow-2xl rounded-3xl"
+                    <iframe height="215" :src="project.url" class=" sm:w-96 shadow-2xl rounded-3xl"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
 
-                    <div class="text-accent max-w-sm lg:max-w-full">
+                    <div class="text-accent max-w-sm lg:max-w-2xl">
                         <div class="badge badge-accent badge-lg text-secondary font-normal mb-2 uppercase">
                             {{ project.kategori }}</div>
                         <div class="tooltip tooltip-warning font-medium" data-tip="Jobdesk">

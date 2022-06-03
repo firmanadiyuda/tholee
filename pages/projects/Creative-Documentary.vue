@@ -47,61 +47,12 @@ export default {
     data() {
         return {
             projects: {
-                sidikfadilla: {
-                    judul: "SIDIK & FADILLA",
+                bagusintan: {
+                    judul: "BAGUS & INTAN",
                     kategori: "wedding highlight",
                     jobdesk: "all in",
-                    url: "https://www.youtube.com/embed/wyzeFTNv7Fw",
-                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi akad dan resepsi pada acara pernikahan Sidik & Fadilla."
-                },
-                adhirifka: {
-                    judul: "ADHI & RIFKA",
-                    kategori: "wedding highlight",
-                    jobdesk: "all in",
-                    url: "https://www.youtube.com/embed/0r74vlK2ej4",
-                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi akad dan resepsi pada acara pernikahan Adhi & Rifka."
-                },
-                faizindah: {
-                    judul: "FAIZ & INDAH",
-                    kategori: "wedding highlight",
-                    jobdesk: "all in",
-                    url: "https://www.youtube.com/embed/gGzKX3MNQgc",
-                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi akad dan resepsi pada acara pernikahan Faiz & Indah."
-                },
-                niadika: {
-                    judul: "NIA & DIKA",
-                    kategori: "wedding highlight",
-                    jobdesk: "all in",
-                    url: "https://www.youtube.com/embed/Dl9JIDxtG7I",
-                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi resepsi pada acara pernikahan Nia & Dika."
-                },
-                meylianaharris: {
-                    judul: "MEYLIANA & HARRIS",
-                    kategori: "wedding highlight",
-                    jobdesk: "editing",
-                    url: "https://www.youtube.com/embed/jtPhwmcZ23s",
-                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi akad dan resepsi pada acara pernikahan Meyliana & Harris."
-                },
-                meldacandra: {
-                    judul: "MELDA & CANDRA",
-                    kategori: "wedding highlight",
-                    jobdesk: "editing",
-                    url: "https://www.youtube.com/embed/fjXBXopnSIc",
-                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi akad dan resepsi pada acara pernikahan Melda & Candra."
-                },
-                fikafajar: {
-                    judul: "FIKA & FAJAR",
-                    kategori: "wedding highlight",
-                    jobdesk: "editing",
-                    url: "https://www.youtube.com/embed/SVfT5d25V5k",
-                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi akad dan resepsi pada acara pernikahan Fika & Fajar."
-                },
-                ayuheri: {
-                    judul: "AYU & HERI",
-                    kategori: "wedding highlight",
-                    jobdesk: "editing",
-                    url: "https://www.youtube.com/embed/_bFMBiWJFG8",
-                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi akad dan resepsi pada acara pernikahan Ayu & Heri."
+                    url: "https://www.youtube.com/embed/O2UZY_DLf7s",
+                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi akad dan resepsi pada acara pernikahan Bagus & Intan."
                 },
                 abdurluluk: {
                     judul: "ABDUR & LULUK",
@@ -110,12 +61,68 @@ export default {
                     url: "https://www.youtube.com/embed/GVzzA_mqPps",
                     deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi akad dan resepsi pada acara pernikahan Abdur & Luluk."
                 },
-                bagusintan: {
-                    judul: "BAGUS & INTAN",
+                ayuheri: {
+                    judul: "AYU & HERI",
+                    kategori: "wedding highlight",
+                    jobdesk: "editing",
+                    url: "https://www.youtube.com/embed/_bFMBiWJFG8",
+                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi akad dan resepsi pada acara pernikahan Ayu & Heri."
+                },
+                fikafajar: {
+                    judul: "FIKA & FAJAR",
+                    kategori: "wedding highlight",
+                    jobdesk: "editing",
+                    url: "https://www.youtube.com/embed/SVfT5d25V5k",
+                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi akad dan resepsi pada acara pernikahan Fika & Fajar."
+                },
+                meldacandra: {
+                    judul: "MELDA & CANDRA",
+                    kategori: "wedding highlight",
+                    jobdesk: "editing",
+                    url: "https://www.youtube.com/embed/fjXBXopnSIc",
+                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi akad dan resepsi pada acara pernikahan Melda & Candra."
+                },
+                meylianaharris: {
+                    judul: "MEYLIANA & HARRIS",
+                    kategori: "wedding highlight",
+                    jobdesk: "editing",
+                    url: "https://www.youtube.com/embed/jtPhwmcZ23s",
+                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi akad dan resepsi pada acara pernikahan Meyliana & Harris."
+                },
+                niadika: {
+                    judul: "NIA & DIKA",
                     kategori: "wedding highlight",
                     jobdesk: "all in",
-                    url: "https://www.youtube.com/embed/O2UZY_DLf7s",
-                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi akad dan resepsi pada acara pernikahan Bagus & Intan."
+                    url: "https://www.youtube.com/embed/Dl9JIDxtG7I",
+                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi resepsi pada acara pernikahan Nia & Dika."
+                },
+                faizindah: {
+                    judul: "FAIZ & INDAH",
+                    kategori: "wedding highlight",
+                    jobdesk: "all in",
+                    url: "https://www.youtube.com/embed/gGzKX3MNQgc",
+                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi akad dan resepsi pada acara pernikahan Faiz & Indah."
+                },
+                adhirifka: {
+                    judul: "ADHI & RIFKA",
+                    kategori: "wedding highlight",
+                    jobdesk: "all in",
+                    url: "https://www.youtube.com/embed/0r74vlK2ej4",
+                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi akad dan resepsi pada acara pernikahan Adhi & Rifka."
+                },
+                sidikfadilla: {
+                    judul: "SIDIK & FADILLA",
+                    kategori: "wedding highlight",
+                    jobdesk: "all in",
+                    url: "https://www.youtube.com/embed/wyzeFTNv7Fw",
+                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi akad dan resepsi pada acara pernikahan Sidik & Fadilla."
+                },
+                bytesfest2019: {
+                    judul: "BYTESFEST 2019",
+                    kategori: "after movie",
+                    jobdesk: "editing",
+                    url: "https://www.youtube.com/embed/rRwFVY4YMl8",
+                    deskripsi: "Creative Documentary berupa After Movie Video pada saat event BytesFest tahun 2019 yang diselenggarakan oleh HMP PTIK Mikroptik Universitas Sebelas Maret Surakarta."
                 },
             }
         }

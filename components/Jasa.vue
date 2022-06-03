@@ -16,7 +16,7 @@
                         <h2 class="card-title tracking-wide font-bold text-white">{{ jasa.nama }}</h2>
                         <p class="opacity-70">{{ jasa.deskripsi }}</p>
                         <div class="card-actions justify-end mt-5">
-                            <button class="btn btn-accent">Konsultasi</button>
+                            <label for="kontakmodal" class="btn btn-accent">Konsultasi</label>
                         </div>
                     </div>
                 </div>

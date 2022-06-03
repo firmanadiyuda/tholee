@@ -15,5 +15,7 @@
                         class="ri-youtube-fill ri-xl"></i></a>
             </div>
         </div>
+        <KontakModal />
+
     </footer>
 </template>

@@ -60,7 +60,7 @@
       </ul>
     </div>
     <div class="navbar-end">
-      <a class="btn btn-accent">Hubungi Kami</a>
+      <label for="kontakmodal" class="btn btn-accent">Hubungi Kami</label>
     </div>
   </div>
 </template>

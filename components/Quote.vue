@@ -1,7 +1,7 @@
 <template>
     <div class="hero min-h-screen bg-secondary">
         <div class="hero-content flex-col lg:flex-row py-20 lg:px-10 gap-10 z-40">
-            <img src="/assets/img/person/gilles-peress.jpg" class="max-w-sm shadow-2xl rounded-3xl" />
+            <img src="/assets/img/person/gilles-peress.jpg" class="w-full sm:max-w-sm shadow-2xl rounded-3xl" />
             <div class="text-accent max-w-sm lg:max-w-full">
                 <div class="badge badge-accent badge-lg text-secondary font-normal mb-2">Gilles
                     Perres</div>

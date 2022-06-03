@@ -17,7 +17,7 @@
         <div id="projects">
             <div v-for="project in projects" :key="project.judul" class="hero bg-secondary text-center md:text-left">
                 <div class="hero-content flex-col md:flex-row py-20 lg:px-10 gap-10 z-40 border-b-accent/10 border-b-2">
-                    <iframe width="560" height="215" :src="project.url" class="max-w-sm shadow-2xl rounded-3xl"
+                    <iframe height="215" :src="project.url" class="w-full sm:w-[420px] shadow-2xl rounded-3xl"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>

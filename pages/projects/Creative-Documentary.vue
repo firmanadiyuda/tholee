@@ -49,73 +49,73 @@ export default {
             projects: {
                 bagusintan: {
                     judul: "BAGUS & INTAN",
-                    kategori: "wedding highlight",
+                    kategori: "wedding clip",
                     jobdesk: "all in",
                     url: "https://www.youtube.com/embed/O2UZY_DLf7s",
-                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi akad dan resepsi pada acara pernikahan Bagus & Intan."
+                    deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Bagus & Intan."
                 },
                 abdurluluk: {
                     judul: "ABDUR & LULUK",
-                    kategori: "wedding highlight",
+                    kategori: "wedding clip",
                     jobdesk: "editing",
                     url: "https://www.youtube.com/embed/GVzzA_mqPps",
-                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi akad dan resepsi pada acara pernikahan Abdur & Luluk."
+                    deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Abdur & Luluk."
                 },
                 ayuheri: {
                     judul: "AYU & HERI",
-                    kategori: "wedding highlight",
+                    kategori: "wedding clip",
                     jobdesk: "editing",
                     url: "https://www.youtube.com/embed/_bFMBiWJFG8",
-                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi akad dan resepsi pada acara pernikahan Ayu & Heri."
+                    deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Ayu & Heri."
                 },
                 fikafajar: {
                     judul: "FIKA & FAJAR",
-                    kategori: "wedding highlight",
+                    kategori: "wedding clip",
                     jobdesk: "editing",
                     url: "https://www.youtube.com/embed/SVfT5d25V5k",
-                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi akad dan resepsi pada acara pernikahan Fika & Fajar."
+                    deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Fika & Fajar."
                 },
                 meldacandra: {
                     judul: "MELDA & CANDRA",
-                    kategori: "wedding highlight",
+                    kategori: "wedding clip",
                     jobdesk: "editing",
                     url: "https://www.youtube.com/embed/fjXBXopnSIc",
-                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi akad dan resepsi pada acara pernikahan Melda & Candra."
+                    deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Melda & Candra."
                 },
                 meylianaharris: {
                     judul: "MEYLIANA & HARRIS",
-                    kategori: "wedding highlight",
+                    kategori: "wedding clip",
                     jobdesk: "editing",
                     url: "https://www.youtube.com/embed/jtPhwmcZ23s",
-                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi akad dan resepsi pada acara pernikahan Meyliana & Harris."
+                    deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Meyliana & Harris."
                 },
                 niadika: {
                     judul: "NIA & DIKA",
-                    kategori: "wedding highlight",
+                    kategori: "wedding clip",
                     jobdesk: "all in",
                     url: "https://www.youtube.com/embed/Dl9JIDxtG7I",
-                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi resepsi pada acara pernikahan Nia & Dika."
+                    deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi resepsi pada acara pernikahan Nia & Dika."
                 },
                 faizindah: {
                     judul: "FAIZ & INDAH",
-                    kategori: "wedding highlight",
+                    kategori: "wedding clip",
                     jobdesk: "all in",
                     url: "https://www.youtube.com/embed/gGzKX3MNQgc",
-                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi akad dan resepsi pada acara pernikahan Faiz & Indah."
+                    deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Faiz & Indah."
                 },
                 adhirifka: {
                     judul: "ADHI & RIFKA",
-                    kategori: "wedding highlight",
+                    kategori: "wedding clip",
                     jobdesk: "all in",
                     url: "https://www.youtube.com/embed/0r74vlK2ej4",
-                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi akad dan resepsi pada acara pernikahan Adhi & Rifka."
+                    deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Adhi & Rifka."
                 },
                 sidikfadilla: {
                     judul: "SIDIK & FADILLA",
-                    kategori: "wedding highlight",
+                    kategori: "wedding clip",
                     jobdesk: "all in",
                     url: "https://www.youtube.com/embed/wyzeFTNv7Fw",
-                    deskripsi: "Creative Documentary berupa Wedding Highlight Video pada saat prosesi akad dan resepsi pada acara pernikahan Sidik & Fadilla."
+                    deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Sidik & Fadilla."
                 },
                 bytesfest2019: {
                     judul: "BYTESFEST 2019",

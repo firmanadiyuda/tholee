@@ -47,13 +47,13 @@ export default {
     data() {
         return {
             projects: {
-                robotikauns: {
-                    judul: "ROBOTIKA UNS",
-                    kategori: "company profile",
-                    jobdesk: "all in",
-                    url: "https://www.youtube.com/embed/garImIs1Isc",
-                    deskripsi: "Memperkenalkan Unit Kegiatan Mahasiswa Robotika di Universitas Sebelas Maret dengan konsep 'freezing time' untuk merepresentasikan ruang gerak yang terbatas di saat pandemi Covid-19."
-                },
+                // robotikauns: {
+                //     judul: "ROBOTIKA UNS",
+                //     kategori: "company profile",
+                //     jobdesk: "all in",
+                //     url: "https://www.youtube.com/embed/garImIs1Isc",
+                //     deskripsi: "Memperkenalkan Unit Kegiatan Mahasiswa Robotika di Universitas Sebelas Maret dengan konsep 'freezing time' untuk merepresentasikan ruang gerak yang terbatas di saat pandemi Covid-19."
+                // },
             }
         };
     },

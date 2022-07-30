@@ -47,6 +47,13 @@ export default {
     data() {
         return {
             projects: {
+                netyary: {
+                    judul: "NETY & ARY",
+                    kategori: "wedding clip",
+                    jobdesk: "all in",
+                    url: "https://www.youtube.com/embed/Sm8999i1odk",
+                    deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad pada acara pernikahan Nety & Ary."
+                },
                 bagusintan: {
                     judul: "BAGUS & INTAN",
                     kategori: "wedding clip",

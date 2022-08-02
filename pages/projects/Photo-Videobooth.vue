@@ -52,7 +52,7 @@ export default {
                     judul: "THE WEDDING OF AGNES & ALDO",
                     kategori: "180 Photobooth",
                     jobdesk: "all in",
-                    url: "https://www.youtube.com/embed/z7Kvidk0Ug4",
+                    url: "https://www.youtube.com/embed/GLk3RJ565F4",
                     deskripsi: "180 Photobooth menggunakan 10 kamera DSLR pada acara resepsi pernikahan Agnes & Aldo tanggal 2 Juli 2022."
                 },
             }

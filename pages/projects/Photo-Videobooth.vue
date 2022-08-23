@@ -55,6 +55,13 @@ export default {
                     url: "https://www.youtube.com/embed/GLk3RJ565F4",
                     deskripsi: "180 Photobooth menggunakan 10 kamera DSLR pada acara resepsi pernikahan Agnes & Aldo tanggal 2 Juli 2022."
                 },
+                festivalbalekambang2022_360: {
+                    judul: "FESTIVAL BALEKAMBANG 2022",
+                    kategori: "360 Videobooth",
+                    jobdesk: "all in",
+                    url: "https://www.youtube.com/embed/oezhg8CIId8",
+                    deskripsi: "360 Videobooth pada event Festival Balekambang 2022 tanggal 20 sampai 21 Agustus 2022 di Taman Balekambang Solo."
+                },
             }
         };
     },

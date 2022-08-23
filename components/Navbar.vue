@@ -60,7 +60,8 @@
       </ul>
     </div>
     <div class="navbar-end">
-      <label for="kontakmodal" class="btn btn-accent">Hubungi Kami</label>
+      <label for="kontakmodal" class="btn btn-accent"><i class="ri-calendar-check-fill ri-lg"></i> &nbsp;
+        BOOKING</label>
     </div>
   </div>
 </template>

@@ -48,6 +48,13 @@ export default {
     data() {
         return {
             projects: {
+                pkkmbisiska2022_360: {
+                    judul: "PKKMB ISI SURAKARTA 2022",
+                    kategori: "360 Videobooth",
+                    jobdesk: "all in",
+                    url: "https://www.youtube.com/embed/oezhg8CIId8",
+                    deskripsi: "360 Videobooth pada event PKKMB Gatotkaca, Institut Seni Indonesia Surakarta tanggal 31 Agustus 2022 di Teater Besar ISI Surakarta."
+                },
                 festivalbalekambang2022_360: {
                     judul: "FESTIVAL BALEKAMBANG 2022",
                     kategori: "360 Videobooth",

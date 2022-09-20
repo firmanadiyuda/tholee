@@ -37,16 +37,10 @@
                     Pricelist
                 </a>
                 <br>
-                <a href="https://wa.me/6282211253961" target="_blank" class="btn  btn-accent btn-wide my-2"><i
+                <a href="https://wa.me/6289525009655" target="_blank" class="btn  btn-accent btn-wide my-2"><i
                         class="ri-whatsapp-line ri-lg"></i>
                     &nbsp;
-                    Chat Admin 1
-                </a>
-                <br>
-                <a href="https://wa.me/6285158729007" target="_blank" class="btn  btn-accent btn-wide my-2"><i
-                        class="ri-whatsapp-line ri-lg"></i>
-                    &nbsp;
-                    Chat Admin 2
+                    Chat Admin
                 </a>
                 <br>
                 <div class="my-10 w-full">

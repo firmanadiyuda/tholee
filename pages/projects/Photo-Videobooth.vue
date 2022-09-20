@@ -48,6 +48,13 @@ export default {
     data() {
         return {
             projects: {
+                hobstudio: {
+                    judul: "GRAND OPENING HOB STUDIO",
+                    kategori: "360 Videobooth",
+                    jobdesk: "all in",
+                    url: "https://www.youtube.com/embed/U2F4YXnKHHc",
+                    deskripsi: "360 Videobooth pada event Grand Opening studio baru House Of Badriyah tanggal 10 September 2022 di Mojosongo."
+                },
                 pkkmbisiska2022_360: {
                     judul: "PKKMB ISI SURAKARTA 2022",
                     kategori: "360 Videobooth",

@@ -47,6 +47,13 @@ export default {
     data() {
         return {
             projects: {
+                margarethaanggi: {
+                    judul: "MARGARETHA & ANGGI",
+                    kategori: "wedding clip",
+                    jobdesk: "all in",
+                    url: "https://www.youtube.com/embed/JtVdxEG8eJ0",
+                    deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi pemberkatan dan resepsi acara pernikahan Margaretha & Anggi."
+                },
                 netyary: {
                     judul: "NETY & ARY",
                     kategori: "wedding clip",

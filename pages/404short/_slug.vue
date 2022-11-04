@@ -18,6 +18,8 @@
                     <br>
                     URL yang kamu tuju tidak ditemukan. Jika kamu mencoba untuk mendownload hasil dari 180 Photobooth
                     atau 360 Videobooth, silahkan tunggu beberapa menit dan klik tombol Refresh di bawah ini.
+                    <br> <br>
+                    Jika link QR sudah melebihi 1x24 Jam maka link QR akan kadaluarsa.
                     <br> <br> <br>
                     <a :href="'https://go.tholee.my.id/' + slug" class="btn  btn-accent btn-wide my-2"><i
                             class="ri-refresh-line ri-lg"></i>

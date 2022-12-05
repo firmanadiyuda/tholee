@@ -47,6 +47,13 @@ export default {
     data() {
         return {
             projects: {
+                yusufpuri: {
+                    judul: "YUSUF & PURI",
+                    kategori: "wedding clip",
+                    jobdesk: "all in",
+                    url: "https://www.youtube.com/embed/VYDyj4U551E",
+                    deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi acara pernikahan Yusuf & Puri."
+                },
                 margarethaanggi: {
                     judul: "MARGARETHA & ANGGI",
                     kategori: "wedding clip",
@@ -131,13 +138,13 @@ export default {
                     url: "https://www.youtube.com/embed/wyzeFTNv7Fw",
                     deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Sidik & Fadilla."
                 },
-                bytesfest2019: {
-                    judul: "BYTESFEST 2019",
-                    kategori: "after movie",
-                    jobdesk: "editing",
-                    url: "https://www.youtube.com/embed/rRwFVY4YMl8",
-                    deskripsi: "Creative Documentary berupa After Movie Video pada saat event BytesFest tahun 2019 yang diselenggarakan oleh HMP PTIK Mikroptik Universitas Sebelas Maret Surakarta."
-                },
+                // bytesfest2019: {
+                //     judul: "BYTESFEST 2019",
+                //     kategori: "after movie",
+                //     jobdesk: "editing",
+                //     url: "https://www.youtube.com/embed/rRwFVY4YMl8",
+                //     deskripsi: "Creative Documentary berupa After Movie Video pada saat event BytesFest tahun 2019 yang diselenggarakan oleh HMP PTIK Mikroptik Universitas Sebelas Maret Surakarta."
+                // },
             }
         }
     }

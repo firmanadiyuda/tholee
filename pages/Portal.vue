@@ -14,12 +14,12 @@
                         &nbsp;
                         Booking Online
                     </a>
-                    <br>
+                    <!-- <br>
                     <a href="https://go.tholee.my.id/pricelist" target="_blank" class="btn  btn-accent btn-wide my-2"><i
                             class="ri-price-tag-3-fill ri-lg"></i>
                         &nbsp;
                         Pricelist
-                    </a>
+                    </a> -->
                     <br>
                     <a href="https://wa.me/6289525009655" target="_blank" class="btn  btn-accent btn-wide my-2"><i
                             class="ri-whatsapp-line ri-lg"></i>
@@ -27,12 +27,13 @@
                         Chat Admin
                     </a>
                     <br>
+                    <br>
 
-                    <div class="my-10 w-full">
+                    <!-- <div class="my-10 w-full">
                         <a href="https://www.bridestory.com/tholee-studio" title="Tholee Studio" target="_blank"
                             rel="dofollow"><img alt="Tholee Studio" width="154" height="40" class="m-auto"
                                 src="https://business.bridestory.com/assets/images/badges/trusted/darkpink.png" /></a>
-                    </div>
+                    </div> -->
 
                     <div class="grid grid-flow-col gap-3">
                         <div></div>

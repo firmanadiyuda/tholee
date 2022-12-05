@@ -47,13 +47,13 @@ export default {
     data() {
         return {
             projects: {
-                tamanbalekambang: {
-                    judul: "TAMAN BALEKAMBANG",
-                    kategori: "short documentary",
-                    jobdesk: "consultant",
-                    url: "https://www.youtube.com/embed/QEVK9oK_ESs",
-                    deskripsi: "Film pendek dokumenter yang memperkenalkan Taman Balekambang yang berlokasi di Surakarta. Peran Tholee Studio dalam produksi film pendek ini adalah sebagai consultant."
-                },
+                // tamanbalekambang: {
+                //     judul: "TAMAN BALEKAMBANG",
+                //     kategori: "short documentary",
+                //     jobdesk: "consultant",
+                //     url: "https://www.youtube.com/embed/QEVK9oK_ESs",
+                //     deskripsi: "Film pendek dokumenter yang memperkenalkan Taman Balekambang yang berlokasi di Surakarta. Peran Tholee Studio dalam produksi film pendek ini adalah sebagai consultant."
+                // },
                 onedayinsolo: {
                     judul: "ONE DAY IN SOLO",
                     kategori: "short movie",

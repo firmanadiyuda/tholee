@@ -5,9 +5,9 @@
             <!-- <p class="font-bold">
                 Photo & Videography
             </p> -->
-            <a href="https://www.bridestory.com/tholee-studio" class="pt-2" title="Tholee Studio" target="_blank"
+            <!-- <a href="https://www.bridestory.com/tholee-studio" class="pt-2" title="Tholee Studio" target="_blank"
                 rel="dofollow"><img alt="Tholee Studio" width="154" height="40"
-                    src="https://business.bridestory.com/assets/images/badges/trusted/darkpink.png" /></a>
+                    src="https://business.bridestory.com/assets/images/badges/trusted/darkpink.png" /></a> -->
             <KontakModal />
             <p>Copyright © 2022 - All right reserved</p>
 

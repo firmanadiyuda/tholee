@@ -7,28 +7,28 @@
                 <div class="max-w-xl">
 
                     <b>1. Be Ok</b> <br>
-                    <audio width="265" height="300" controls class="rounded-xl shadow-xl">
+                    <audio width="265" height="300" controls controlsList="nodownload" class="rounded-xl shadow-xl">
                         <source :src="'https://drive.google.com/uc?export=download&id=1DEG7QsoE-ymIkTkyYwourp2yAkCPTW3X'"
                             type="audio/mpeg">
                         Your browser does not support the video tag.
                     </audio> <br>
 
                     <b>2. Body Back</b> <br>
-                    <audio width="265" height="300" controls class="rounded-xl shadow-xl">
+                    <audio width="265" height="300" controls controlsList="nodownload" class="rounded-xl shadow-xl">
                         <source :src="'https://drive.google.com/uc?export=download&id=1DURpkUKD7V9a-Euq8UVFfRFoTyWxwlZD'"
                             type="audio/mpeg">
                         Your browser does not support the video tag.
                     </audio> <br>
 
                     <b>3. Last Dance</b> <br>
-                    <audio width="265" height="300" controls class="rounded-xl shadow-xl">
+                    <audio width="265" height="300" controls controlsList="nodownload" class="rounded-xl shadow-xl">
                         <source :src="'https://drive.google.com/uc?export=download&id=1KBTyyWBnM4xP8Qb3UnVlUFSiQZJPf4hx'"
                             type="audio/mpeg">
                         Your browser does not support the video tag.
                     </audio> <br>
 
                     <b>4. Lonely World</b> <br>
-                    <audio width="265" height="300" controls class="rounded-xl shadow-xl">
+                    <audio width="265" height="300" controls controlsList="nodownload" class="rounded-xl shadow-xl">
                         <source :src="'https://drive.google.com/uc?export=download&id=1DimbiJAcCOd5F5iEQbIB5jd_eBLHXbst'"
                             type="audio/mpeg">
                         Your browser does not support the video tag.

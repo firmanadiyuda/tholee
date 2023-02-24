@@ -6,9 +6,10 @@
             <div class="hero-content  z-40">
                 <div class="max-w-xl">
 
-                    <b>1. Be Ok</b> <br>
+
+                    <b>1. ISI Art Fest</b> <br>
                     <audio width="265" height="300" controls controlsList="nodownload" class="rounded-xl shadow-xl">
-                        <source :src="'https://drive.google.com/uc?export=download&id=1DEG7QsoE-ymIkTkyYwourp2yAkCPTW3X'"
+                        <source :src="'https://drive.google.com/uc?export=download&id=1q5iQORx03JdotzAeemXHvjVtxMxrxgjk'"
                             type="audio/mpeg">
                         Your browser does not support the video tag.
                     </audio> <br>
@@ -30,6 +31,13 @@
                     <b>4. Lonely World</b> <br>
                     <audio width="265" height="300" controls controlsList="nodownload" class="rounded-xl shadow-xl">
                         <source :src="'https://drive.google.com/uc?export=download&id=1DimbiJAcCOd5F5iEQbIB5jd_eBLHXbst'"
+                            type="audio/mpeg">
+                        Your browser does not support the video tag.
+                    </audio> <br>
+
+                    <b>5. Be Ok</b> <br>
+                    <audio width="265" height="300" controls controlsList="nodownload" class="rounded-xl shadow-xl">
+                        <source :src="'https://drive.google.com/uc?export=download&id=1DEG7QsoE-ymIkTkyYwourp2yAkCPTW3X'"
                             type="audio/mpeg">
                         Your browser does not support the video tag.
                     </audio> <br>

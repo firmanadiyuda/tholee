@@ -22,6 +22,31 @@
                     </a>
                     <br> <br>
 
+
+
+                    <!-- The button to open modal -->
+
+                    <!-- Put this part before </body> tag -->
+                    <input type="checkbox" id="my-modal" class="modal-toggle" checked />
+                    <div class="modal">
+                        <div class="modal-box bg-primary outline-none outline-accent/10 outline-1 p-0">
+                            <h3 class="font-bold text-2xl bg-zinc-200 text-primary p-2">PERHATIAN</h3>
+                            <div class="px-5 pb-5 pt-2">
+                                <p class="py-4">Link hanya berlaku selama 2x24 Jam. Lebih dari itu link akan kadaluarsa dan
+                                    video sudah tidak dapat diakses lagi.</p>
+                                <p class="py-4">Jika butuh bantuan, silahkan datangi salah satu kru yang menggunakan ID Card
+                                    <b>"PIC"</b> atau hubungi melalui live chat di pojok kanan bawah pada halaman ini.
+                                </p>
+                                <div class="modal-action">
+                                    <label for="my-modal" class="btn btn-outline m-auto text-white">Oke,
+                                        Mengerti</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
                     <!-- <div class="my-10 w-full">
                         <a href="https://www.bridestory.com/tholee-studio" title="Tholee Studio" target="_blank"
                             rel="dofollow"><img alt="Tholee Studio" width="154" height="40" class="m-auto"

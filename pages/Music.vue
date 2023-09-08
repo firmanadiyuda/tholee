@@ -1,7 +1,5 @@
 <template>
     <div>
-        <!-- <Navbar /> -->
-
         <div class="hero min-h-screen bg-primary">
             <div class="hero-content  z-40">
                 <div class="max-w-xl">

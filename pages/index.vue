@@ -7,4 +7,3 @@
     <Foot />
   </div>
 </template>
-

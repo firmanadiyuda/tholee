@@ -25,11 +25,11 @@
                     <label for="kontakmodal" class="btn btn-error btn-outline btn-sm btn-accent">X</label>
                 </div>
 
-                <a href="https://go.tholee.my.id/booking" target="_blank"
+                <!-- <a href="https://go.tholee.my.id/booking" target="_blank"
                     class="btn btn-outline btn-accent btn-wide my-2"><i class="ri-calendar-check-fill ri-lg"></i>
                     &nbsp;
                     Booking Online
-                </a>
+                </a> -->
                 <!-- <br>
                 <a href="https://go.tholee.my.id/pricelist" target="_blank" class="btn  btn-accent btn-wide my-2"><i
                         class="ri-price-tag-3-fill ri-lg"></i>
@@ -50,7 +50,6 @@
                         rel="dofollow"><img alt="Tholee Studio" width="154" height="40" class="m-auto"
                             src="https://business.bridestory.com/assets/images/badges/trusted/darkpink.png" /></a>
                 </div> -->
-
 
 
             </div>

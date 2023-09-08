@@ -9,11 +9,11 @@
                         <img src="/assets/img/logo.png" class="m-auto pb-10 pt-10" alt="">
                     </NuxtLink>
 
-                    <a href="https://go.tholee.my.id/booking" target="_blank"
+                    <!-- <a href="https://go.tholee.my.id/booking" target="_blank"
                         class="btn btn-outline btn-accent btn-wide my-2"><i class="ri-calendar-check-fill ri-lg"></i>
                         &nbsp;
                         Booking Online
-                    </a>
+                    </a> -->
                     <!-- <br>
                     <a href="https://go.tholee.my.id/pricelist" target="_blank" class="btn  btn-accent btn-wide my-2"><i
                             class="ri-price-tag-3-fill ri-lg"></i>

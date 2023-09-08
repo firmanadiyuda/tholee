@@ -18,7 +18,8 @@
                                 </video>
                             </div>
                             <div v-if="result.type == 'photo'">
-                                <img width="265" :src="'https://drive.google.com/uc?export=download&id=' + result.file_id" alt="">
+                                <img width="265" :src="'https://drive.google.com/uc?export=download&id=' + result.file_id"
+                                    alt="">
                             </div>
                         </div>
                         <div v-else>
@@ -98,12 +99,13 @@
     </div>
 </template>
 
-<script>
+<!-- <script>
 export default {
     async asyncData({ params, $axios }) {
         const slug = params.slug // When calling /abc the slug will be "abc"
         // const result = await $http.$get(`https://api.nuxtjs.dev/results/${params.id}`)
-        const result = await $axios.$get(`https://ap-southeast-1.aws.data.mongodb-api.com/app/data-ofqhx/endpoint/find?id=${slug}`)
+        // const result = await $axios.$get(`https://ap-southeast-1.aws.data.mongodb-api.com/app/data-ofqhx/endpoint/find?id=${slug}`)
+        const result = await $http.$get(`https://ap-southeast-1.aws.data.mongodb-api.com/app/data-ofqhx/endpoint/find?id=${slug}`)
 
         // console.log(result)
         return { slug, result }
@@ -115,4 +117,19 @@ export default {
         }
     }
 }
+</script> -->
+
+<script setup>
+import { ref, onMounted } from 'vue';
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+
+const reloadPage = () => {
+    location.reload();
+};
+
+const slug = route.params.slug
+const { data: result } = await useFetch(`https://ap-southeast-1.aws.data.mongodb-api.com/app/data-ofqhx/endpoint/find?id=${slug}`)
+
 </script>

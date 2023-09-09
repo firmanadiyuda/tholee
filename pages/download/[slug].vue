@@ -123,7 +123,12 @@ export default {
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 
+
 const route = useRoute();
+
+useHead({
+    title: '[ ' + route.params.slug + ' ]',
+})
 
 const reloadPage = () => {
     location.reload();

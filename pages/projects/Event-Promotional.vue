@@ -42,27 +42,28 @@
     </div>
 </template>
 
-<script>
-export default {
-    data() {
-        return {
-            projects: {
-                oprecrobotikauns: {
-                    judul: "OPREC ROBOTIKA UNS",
-                    kategori: "event promotional",
-                    jobdesk: "editing",
-                    url: "https://www.youtube.com/embed/6Uf76R5nvGM",
-                    deskripsi: "Video pengenalan tim dan pemberitahuan pembukaan rekrutmen anggota baru Unit Kegiatan Mahasiswa Robotika di Universitas Sebelas Maret."
-                },
-                bytesfest2019: {
-                    judul: "VIDEOTRON BYTESFEST 2019",
-                    kategori: "event promotional",
-                    jobdesk: "editing",
-                    url: "https://www.youtube.com/embed/_IlQPJrLiy8",
-                    deskripsi: "Video promosi event BytesFest 2019 yang diselenggarakan oleh HMP PTIK Mikroptik Universitas Sebelas Maret Surakarta dan ditayangkan pada videotron."
-                },
-            }
-        };
+<script setup lang="ts">
+import { ref } from 'vue';
+
+useHead({
+    title: 'Event Promotional',
+})
+
+const projects = ref({
+    oprecrobotikauns: {
+        judul: "OPREC ROBOTIKA UNS",
+        kategori: "event promotional",
+        jobdesk: "editing",
+        url: "https://www.youtube.com/embed/6Uf76R5nvGM",
+        deskripsi: "Video pengenalan tim dan pemberitahuan pembukaan rekrutmen anggota baru Unit Kegiatan Mahasiswa Robotika di Universitas Sebelas Maret."
     },
-}
+    bytesfest2019: {
+        judul: "VIDEOTRON BYTESFEST 2019",
+        kategori: "event promotional",
+        jobdesk: "editing",
+        url: "https://www.youtube.com/embed/_IlQPJrLiy8",
+        deskripsi: "Video promosi event BytesFest 2019 yang diselenggarakan oleh HMP PTIK Mikroptik Universitas Sebelas Maret Surakarta dan ditayangkan pada videotron."
+    },
+})
+
 </script>

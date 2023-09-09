@@ -42,111 +42,104 @@
     </div>
 </template>
 
-<script>
-export default {
-    data() {
-        return {
-            projects: {
-                yusufpuri: {
-                    judul: "YUSUF & PURI",
-                    kategori: "wedding clip",
-                    jobdesk: "all in",
-                    url: "https://www.youtube.com/embed/VYDyj4U551E",
-                    deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi acara pernikahan Yusuf & Puri."
-                },
-                margarethaanggi: {
-                    judul: "MARGARETHA & ANGGI",
-                    kategori: "wedding clip",
-                    jobdesk: "all in",
-                    url: "https://www.youtube.com/embed/JtVdxEG8eJ0",
-                    deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi pemberkatan dan resepsi acara pernikahan Margaretha & Anggi."
-                },
-                netyary: {
-                    judul: "NETY & ARY",
-                    kategori: "wedding clip",
-                    jobdesk: "all in",
-                    url: "https://www.youtube.com/embed/Sm8999i1odk",
-                    deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad pada acara pernikahan Nety & Ary."
-                },
-                bagusintan: {
-                    judul: "BAGUS & INTAN",
-                    kategori: "wedding clip",
-                    jobdesk: "all in",
-                    url: "https://www.youtube.com/embed/O2UZY_DLf7s",
-                    deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Bagus & Intan."
-                },
-                abdurluluk: {
-                    judul: "ABDUR & LULUK",
-                    kategori: "wedding clip",
-                    jobdesk: "editing",
-                    url: "https://www.youtube.com/embed/GVzzA_mqPps",
-                    deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Abdur & Luluk."
-                },
-                ayuheri: {
-                    judul: "AYU & HERI",
-                    kategori: "wedding clip",
-                    jobdesk: "editing",
-                    url: "https://www.youtube.com/embed/_bFMBiWJFG8",
-                    deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Ayu & Heri."
-                },
-                fikafajar: {
-                    judul: "FIKA & FAJAR",
-                    kategori: "wedding clip",
-                    jobdesk: "editing",
-                    url: "https://www.youtube.com/embed/SVfT5d25V5k",
-                    deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Fika & Fajar."
-                },
-                meldacandra: {
-                    judul: "MELDA & CANDRA",
-                    kategori: "wedding clip",
-                    jobdesk: "editing",
-                    url: "https://www.youtube.com/embed/fjXBXopnSIc",
-                    deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Melda & Candra."
-                },
-                meylianaharris: {
-                    judul: "MEYLIANA & HARRIS",
-                    kategori: "wedding clip",
-                    jobdesk: "editing",
-                    url: "https://www.youtube.com/embed/jtPhwmcZ23s",
-                    deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Meyliana & Harris."
-                },
-                niadika: {
-                    judul: "NIA & DIKA",
-                    kategori: "wedding clip",
-                    jobdesk: "all in",
-                    url: "https://www.youtube.com/embed/Dl9JIDxtG7I",
-                    deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi resepsi pada acara pernikahan Nia & Dika."
-                },
-                faizindah: {
-                    judul: "FAIZ & INDAH",
-                    kategori: "wedding clip",
-                    jobdesk: "all in",
-                    url: "https://www.youtube.com/embed/gGzKX3MNQgc",
-                    deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Faiz & Indah."
-                },
-                adhirifka: {
-                    judul: "ADHI & RIFKA",
-                    kategori: "wedding clip",
-                    jobdesk: "all in",
-                    url: "https://www.youtube.com/embed/0r74vlK2ej4",
-                    deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Adhi & Rifka."
-                },
-                sidikfadilla: {
-                    judul: "SIDIK & FADILLA",
-                    kategori: "wedding clip",
-                    jobdesk: "all in",
-                    url: "https://www.youtube.com/embed/wyzeFTNv7Fw",
-                    deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Sidik & Fadilla."
-                },
-                // bytesfest2019: {
-                //     judul: "BYTESFEST 2019",
-                //     kategori: "after movie",
-                //     jobdesk: "editing",
-                //     url: "https://www.youtube.com/embed/rRwFVY4YMl8",
-                //     deskripsi: "Creative Documentary berupa After Movie Video pada saat event BytesFest tahun 2019 yang diselenggarakan oleh HMP PTIK Mikroptik Universitas Sebelas Maret Surakarta."
-                // },
-            }
-        }
-    }
-}
+<script setup lang="ts">
+import { ref } from 'vue';
+
+useHead({
+    title: 'Creative Documentary',
+})
+
+const projects = ref({
+    yusufpuri: {
+        judul: "YUSUF & PURI",
+        kategori: "wedding clip",
+        jobdesk: "all in",
+        url: "https://www.youtube.com/embed/VYDyj4U551E",
+        deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi acara pernikahan Yusuf & Puri."
+    },
+    margarethaanggi: {
+        judul: "MARGARETHA & ANGGI",
+        kategori: "wedding clip",
+        jobdesk: "all in",
+        url: "https://www.youtube.com/embed/JtVdxEG8eJ0",
+        deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi pemberkatan dan resepsi acara pernikahan Margaretha & Anggi."
+    },
+    netyary: {
+        judul: "NETY & ARY",
+        kategori: "wedding clip",
+        jobdesk: "all in",
+        url: "https://www.youtube.com/embed/Sm8999i1odk",
+        deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad pada acara pernikahan Nety & Ary."
+    },
+    bagusintan: {
+        judul: "BAGUS & INTAN",
+        kategori: "wedding clip",
+        jobdesk: "all in",
+        url: "https://www.youtube.com/embed/O2UZY_DLf7s",
+        deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Bagus & Intan."
+    },
+    abdurluluk: {
+        judul: "ABDUR & LULUK",
+        kategori: "wedding clip",
+        jobdesk: "editing",
+        url: "https://www.youtube.com/embed/GVzzA_mqPps",
+        deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Abdur & Luluk."
+    },
+    ayuheri: {
+        judul: "AYU & HERI",
+        kategori: "wedding clip",
+        jobdesk: "editing",
+        url: "https://www.youtube.com/embed/_bFMBiWJFG8",
+        deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Ayu & Heri."
+    },
+    fikafajar: {
+        judul: "FIKA & FAJAR",
+        kategori: "wedding clip",
+        jobdesk: "editing",
+        url: "https://www.youtube.com/embed/SVfT5d25V5k",
+        deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Fika & Fajar."
+    },
+    meldacandra: {
+        judul: "MELDA & CANDRA",
+        kategori: "wedding clip",
+        jobdesk: "editing",
+        url: "https://www.youtube.com/embed/fjXBXopnSIc",
+        deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Melda & Candra."
+    },
+    meylianaharris: {
+        judul: "MEYLIANA & HARRIS",
+        kategori: "wedding clip",
+        jobdesk: "editing",
+        url: "https://www.youtube.com/embed/jtPhwmcZ23s",
+        deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Meyliana & Harris."
+    },
+    niadika: {
+        judul: "NIA & DIKA",
+        kategori: "wedding clip",
+        jobdesk: "all in",
+        url: "https://www.youtube.com/embed/Dl9JIDxtG7I",
+        deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi resepsi pada acara pernikahan Nia & Dika."
+    },
+    faizindah: {
+        judul: "FAIZ & INDAH",
+        kategori: "wedding clip",
+        jobdesk: "all in",
+        url: "https://www.youtube.com/embed/gGzKX3MNQgc",
+        deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Faiz & Indah."
+    },
+    adhirifka: {
+        judul: "ADHI & RIFKA",
+        kategori: "wedding clip",
+        jobdesk: "all in",
+        url: "https://www.youtube.com/embed/0r74vlK2ej4",
+        deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Adhi & Rifka."
+    },
+    sidikfadilla: {
+        judul: "SIDIK & FADILLA",
+        kategori: "wedding clip",
+        jobdesk: "all in",
+        url: "https://www.youtube.com/embed/wyzeFTNv7Fw",
+        deskripsi: "Creative Documentary berupa Wedding Clip Video pada saat prosesi akad dan resepsi pada acara pernikahan Sidik & Fadilla."
+    },
+})
 </script>

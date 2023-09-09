@@ -97,7 +97,7 @@
                 </div>
 
                 <div class="grid lg:grid-cols-5 gap-12 ">
-                    <div v-for="sample in samples" :key="sample.nama"
+                    <div v-for="sample in samples"
                         class="z-40 transition-all duration-200 ease-in-out outline-none outline-1 outline-accent/5 hover:outline-accent/70 hover:-translate-y-5 card max-w-sm lg:max-w-full mx-auto bg-secondary/70 shadow-xl text-accent">
 
                         <div class="card-body p-0">
@@ -180,7 +180,8 @@
                         <div>
                             <h1 class="text-5xl font-bold text-primary uppercase"><span class="font-normal">Cuma</span>
                                 {{ harga }}<span class="font-normal"> /jam!*</span></h1>
-                            <p class="py-6 text-primary font-montserrat font-medium text-sm md:text-md">Garansi harga termurah
+                            <p class="py-6 text-primary font-montserrat font-medium text-sm md:text-lg">Garansi harga
+                                termurah
                                 se-Indonesia! Jika kamu menemukan vendor lain dengan harga yang lebih murah dari kami dengan
                                 fitur serupa, kami akan berikan harga tersebut pada kamu. <br> <br> Hubungi kami dengan klik
                                 tombol dibawah ini. <br> Tenang! mau tanya tanya dulu juga boleh kok, gausah sungkan yaa...
@@ -233,172 +234,174 @@
     </div>
 </template>
 
+<script setup lang="ts">
+import { onMounted, ref } from 'vue';
 
-<script>
-export default {
-    data() {
-        return {
-            harga: "749.000",
-            diskon: "Diskon <b>10%</b> khusus untuk booking acara di bulan September 2023!",
-            jasas: {
-                qr: {
-                    nama: "Kode QR Instan",
-                    deskripsi: "Kode QR untuk mendownload hasil dari 360 Videobooth langsung dicetak secara instan dan diberikan ke tamu undangan/pengunjung.",
-                    ilustrasi: "/assets/img/promo/360/advantages/instan.png"
-                },
-                harga: {
-                    nama: "Harga Termurah",
-                    deskripsi: "Garansi harga termurah se-Indonesia. Kamu tidak akan menemukan harga semurah ini di vendor lain dengan fitur serupa.",
-                    ilustrasi: "/assets/img/promo/360/advantages/harga.png"
-                },
-                fleksibel: {
-                    nama: "Fitur Fleksibel",
-                    deskripsi: "Kamu bisa memilih fasilitas dan fitur yang akan digunakan sesuai kebutuhan seperti kustom overlay atau menambahkan musik.",
-                    ilustrasi: "/assets/img/promo/360/advantages/fleksibel.png"
-                },
-                brand: {
-                    nama: "Brand Awareness",
-                    deskripsi: "Acara kamu akan mendapatkan exposure lebih luas karena setiap pengunjung akan memposting di sosial media mereka.",
-                    ilustrasi: "/assets/img/promo/360/advantages/brand.png"
-                },
-                kamera: {
-                    nama: "Peralatan Terbaik",
-                    deskripsi: "Kami menggunakan kamera dan peralatan pendukung terbaik di kelasnya untuk menunjang kelancaran acara kamu.",
-                    ilustrasi: "/assets/img/promo/360/advantages/kamera.png"
-                },
-                cloud: {
-                    nama: "Cloud Gallery",
-                    deskripsi: "Semua hasil video langsung diupload ke Google Drive yang dapat kamu akses dan monitor secara real-time.",
-                    ilustrasi: "/assets/img/promo/360/advantages/cloud.png"
-                },
-            },
+useHead({
+    title: '360 Videobooth',
+})
 
-            samples: {
-                satu: {
-                    id: "1z22buaWSx-nXxzKygt7ivXLPghp2JfR4"
-                },
-                dua: {
-                    id: "1y2YhHB5HSHNuRIjo31Rmq5X6E_iYOrwl"
-                },
-                tiga: {
-                    id: "19wXQTG5XI5N29wAWHN09ZrYUzmHaOyG_"
-                },
-                empat: {
-                    id: "1IzqMqvvASD1t7x_MK6LJL8yjCdMUpah0"
-                },
-                lima: {
-                    id: "12_19N3i4seWDeNGloUBjvRnSk4C3-v_w"
-                },
-            },
-
-            equipments: {
-                satu: {
-                    judul: "1 Spinner Setup",
-                    deskripsi: "Untuk memutar kamera dan lighting."
-                },
-                dua: {
-                    judul: "1 Lighting Set",
-                    deskripsi: "Untuk menerangi subjek saat take."
-                },
-                tiga: {
-                    judul: "4 Lighting Background",
-                    deskripsi: "Untuk menerangi environment."
-                },
-                empat: {
-                    judul: "1 Tablet Preview",
-                    deskripsi: "Untuk menampilkan galeri preview."
-                },
-                lima: {
-                    judul: "1 GoPro Camera",
-                    deskripsi: "Untuk merekam 360 videobooth."
-                },
-                enam: {
-                    judul: "1 Laptop/PC",
-                    deskripsi: "Untuk memproses dan mengupload video."
-                },
-                tujuh: {
-                    judul: "10+ Props",
-                    deskripsi: "Sebagai aksesoris pelengkap."
-                },
-                delapan: {
-                    judul: "3-4 Dedicated Crew",
-                    deskripsi: "Kru Teknisi, Operator, dan Pengarah gaya."
-                },
-            },
-            flowcharts: {
-                satu: {
-                    nomor: 1,
-                    judul: "Persiapan",
-                    deskripsi: "Tamu undangan/pengunjung memilih properti yang akan digunakan lalu menaiki 360 Videobooth."
-                },
-                dua: {
-                    nomor: 2,
-                    judul: "Briefing",
-                    deskripsi: "Briefing pose/gaya dari kru Tholee Studio supaya hasil lebih memuaskan."
-                },
-                tiga: {
-                    nomor: 3,
-                    judul: "Mulai",
-                    deskripsi: "Kamera pada 360 Videobooth mulai berputar dan merekam selama kurang lebih 13 detik."
-                },
-                empat: {
-                    nomor: 4,
-                    judul: "Kode QR",
-                    deskripsi: "Setelah selesai, kode QR untuk mendownload hasil video akan langsung dicetak secara instan kemudian diberikan ke tamu undangan/pengunjung yang baru saja mencoba 360 Videobooth."
-                },
-                lima: {
-                    nomor: 5,
-                    judul: "Proses Video",
-                    deskripsi: "Video akan diproses dan diupload di latar belakang selama kurang lebih 15 detik semenjak selesai merekam. <br> <br> Karna kode QR sudah diberikan di awal, akan memberikan pengalaman instan kepada tamu undangan/pengunjung dan sangat berguna untuk mengurai antrian panjang."
-                },
-                enam: {
-                    nomor: 6,
-                    judul: "Selesai",
-                    deskripsi: "Setelah selesai, preview video akan muncul di galeri pada device tablet yang sudah kami sediakan."
-                }
-            },
-            faqs: {
-                maxvideo: {
-                    pertanyaan: "Berapa banyak batas maksimal video?",
-                    jawaban: "<b>Unlimited!</b> alias tidak ada batasan maksimal video. Kamu bisa menggunakan 360 Videobooth dengan video sebanyak mungkin. <br> <br> Kami hanya menggunakan tarif per jam. Selama durasi jam masih tersedia, kamu masih bisa menggunakan 360 Videobooth."
-                },
-                satujam: {
-                    pertanyaan: "Apakah bisa booking durasi 1 jam saja?",
-                    jawaban: "<b>Bisa.</b> <br> <br> Tetapi harganya akan berbeda. Silahkan konsultasi kepada admin ya..."
-                },
-                luarkota: {
-                    pertanyaan: "Apakah bisa untuk luar kota?",
-                    jawaban: "<b>Bisa.</b> <br> <br> Tetapi akan ada biaya tambahan untuk transport tergantung seberapa jauh jaraknya. <br> <br> Untuk saat ini, basis kami berada di Surakarta dan untuk acara area Surakarta tidak ada tambahan biaya transport."
-                },
-                split: {
-                    pertanyaan: "Apakah bisa split sesi?",
-                    jawaban: "<b>Bisa.</b> <br> <br> Split sesi dikenakan biaya tambahan sebesar Rp100.000/jam."
-                },
-                overtime: {
-                    pertanyaan: "Bagaimana jika durasi acara ternyata molor?",
-                    jawaban: "Kamu akan dikenakan biaya <b>overtime</b> sesuai dengan total kelebihan durasi."
-                },
-                diskon: {
-                    pertanyaan: "Apakah ada diskon booking durasi banyak?",
-                    jawaban: "<b>Pasti ada dong!</b> <br> <br> Untuk informasi lebih lanjut langsung hubungi admin aja ya..."
-                },
-                vendor: {
-                    pertanyaan: "Apakah ada harga khusus untuk vendor?",
-                    jawaban: "<b>Pasti ada dong!</b> <br> <br> Untuk informasi lebih lanjut langsung hubungi admin aja ya..."
-                },
-            },
-        };
+const harga = ref("749.000")
+const diskon = ref("Diskon <b>10%</b> khusus untuk booking acara di bulan September 2023!")
+const jasas = ref({
+    qr: {
+        nama: "Kode QR Instan",
+        deskripsi: "Kode QR untuk mendownload hasil dari 360 Videobooth langsung dicetak secara instan dan diberikan ke tamu undangan/pengunjung.",
+        ilustrasi: "/assets/img/promo/360/advantages/instan.png"
     },
+    harga: {
+        nama: "Harga Termurah",
+        deskripsi: "Garansi harga termurah se-Indonesia. Kamu tidak akan menemukan harga semurah ini di vendor lain dengan fitur serupa.",
+        ilustrasi: "/assets/img/promo/360/advantages/harga.png"
+    },
+    fleksibel: {
+        nama: "Fitur Fleksibel",
+        deskripsi: "Kamu bisa memilih fasilitas dan fitur yang akan digunakan sesuai kebutuhan seperti kustom overlay atau menambahkan musik.",
+        ilustrasi: "/assets/img/promo/360/advantages/fleksibel.png"
+    },
+    brand: {
+        nama: "Brand Awareness",
+        deskripsi: "Acara kamu akan mendapatkan exposure lebih luas karena setiap pengunjung akan memposting di sosial media mereka.",
+        ilustrasi: "/assets/img/promo/360/advantages/brand.png"
+    },
+    kamera: {
+        nama: "Peralatan Terbaik",
+        deskripsi: "Kami menggunakan kamera dan peralatan pendukung terbaik di kelasnya untuk menunjang kelancaran acara kamu.",
+        ilustrasi: "/assets/img/promo/360/advantages/kamera.png"
+    },
+    cloud: {
+        nama: "Cloud Gallery",
+        deskripsi: "Semua hasil video langsung diupload ke Google Drive yang dapat kamu akses dan monitor secara real-time.",
+        ilustrasi: "/assets/img/promo/360/advantages/cloud.png"
+    },
+})
 
-    mounted() {
-        document.addEventListener('play', function (e) {
-            var videos = document.getElementsByTagName('video');
-            for (var i = 0, len = videos.length; i < len; i++) {
-                if (videos[i] != e.target) {
-                    videos[i].pause();
-                }
-            }
-        }, true);
+const samples = ref({
+    satu: {
+        id: "1z22buaWSx-nXxzKygt7ivXLPghp2JfR4"
+    },
+    dua: {
+        id: "1y2YhHB5HSHNuRIjo31Rmq5X6E_iYOrwl"
+    },
+    tiga: {
+        id: "19wXQTG5XI5N29wAWHN09ZrYUzmHaOyG_"
+    },
+    empat: {
+        id: "1IzqMqvvASD1t7x_MK6LJL8yjCdMUpah0"
+    },
+    lima: {
+        id: "12_19N3i4seWDeNGloUBjvRnSk4C3-v_w"
+    },
+})
+
+const equipments = ref({
+    satu: {
+        judul: "1 Spinner Setup",
+        deskripsi: "Untuk memutar kamera dan lighting."
+    },
+    dua: {
+        judul: "1 Lighting Set",
+        deskripsi: "Untuk menerangi subjek saat take."
+    },
+    tiga: {
+        judul: "4 Lighting Background",
+        deskripsi: "Untuk menerangi environment."
+    },
+    empat: {
+        judul: "1 Tablet Preview",
+        deskripsi: "Untuk menampilkan galeri preview."
+    },
+    lima: {
+        judul: "1 GoPro Camera",
+        deskripsi: "Untuk merekam 360 videobooth."
+    },
+    enam: {
+        judul: "1 Laptop/PC",
+        deskripsi: "Untuk memproses dan mengupload video."
+    },
+    tujuh: {
+        judul: "10+ Props",
+        deskripsi: "Sebagai aksesoris pelengkap."
+    },
+    delapan: {
+        judul: "3-4 Dedicated Crew",
+        deskripsi: "Kru Teknisi, Operator, dan Pengarah gaya."
+    },
+})
+
+const flowcharts = ref({
+    satu: {
+        nomor: 1,
+        judul: "Persiapan",
+        deskripsi: "Tamu undangan/pengunjung memilih properti yang akan digunakan lalu menaiki 360 Videobooth."
+    },
+    dua: {
+        nomor: 2,
+        judul: "Briefing",
+        deskripsi: "Briefing pose/gaya dari kru Tholee Studio supaya hasil lebih memuaskan."
+    },
+    tiga: {
+        nomor: 3,
+        judul: "Mulai",
+        deskripsi: "Kamera pada 360 Videobooth mulai berputar dan merekam selama kurang lebih 13 detik."
+    },
+    empat: {
+        nomor: 4,
+        judul: "Kode QR",
+        deskripsi: "Setelah selesai, kode QR untuk mendownload hasil video akan langsung dicetak secara instan kemudian diberikan ke tamu undangan/pengunjung yang baru saja mencoba 360 Videobooth."
+    },
+    lima: {
+        nomor: 5,
+        judul: "Proses Video",
+        deskripsi: "Video akan diproses dan diupload di latar belakang selama kurang lebih 15 detik semenjak selesai merekam. <br> <br> Karna kode QR sudah diberikan di awal, akan memberikan pengalaman instan kepada tamu undangan/pengunjung dan sangat berguna untuk mengurai antrian panjang."
+    },
+    enam: {
+        nomor: 6,
+        judul: "Selesai",
+        deskripsi: "Setelah selesai, preview video akan muncul di galeri pada device tablet yang sudah kami sediakan."
     }
-}
+})
+
+const faqs = ref({
+    maxvideo: {
+        pertanyaan: "Berapa banyak batas maksimal video?",
+        jawaban: "<b>Unlimited!</b> alias tidak ada batasan maksimal video. Kamu bisa menggunakan 360 Videobooth dengan video sebanyak mungkin. <br> <br> Kami hanya menggunakan tarif per jam. Selama durasi jam masih tersedia, kamu masih bisa menggunakan 360 Videobooth."
+    },
+    satujam: {
+        pertanyaan: "Apakah bisa booking durasi 1 jam saja?",
+        jawaban: "<b>Bisa.</b> <br> <br> Tetapi harganya akan berbeda. Silahkan konsultasi kepada admin ya..."
+    },
+    luarkota: {
+        pertanyaan: "Apakah bisa untuk luar kota?",
+        jawaban: "<b>Bisa.</b> <br> <br> Tetapi akan ada biaya tambahan untuk transport tergantung seberapa jauh jaraknya. <br> <br> Untuk saat ini, basis kami berada di Surakarta dan untuk acara area Surakarta tidak ada tambahan biaya transport."
+    },
+    split: {
+        pertanyaan: "Apakah bisa split sesi?",
+        jawaban: "<b>Bisa.</b> <br> <br> Split sesi dikenakan biaya tambahan sebesar Rp100.000/jam."
+    },
+    overtime: {
+        pertanyaan: "Bagaimana jika durasi acara ternyata molor?",
+        jawaban: "Kamu akan dikenakan biaya <b>overtime</b> sesuai dengan total kelebihan durasi."
+    },
+    diskon: {
+        pertanyaan: "Apakah ada diskon booking durasi banyak?",
+        jawaban: "<b>Pasti ada dong!</b> <br> <br> Untuk informasi lebih lanjut langsung hubungi admin aja ya..."
+    },
+    vendor: {
+        pertanyaan: "Apakah ada harga khusus untuk vendor?",
+        jawaban: "<b>Pasti ada dong!</b> <br> <br> Untuk informasi lebih lanjut langsung hubungi admin aja ya..."
+    },
+})
+
+
+onMounted(() => {
+    document.addEventListener('play', (e) => {
+        const videos = document.getElementsByTagName('video');
+        for (let i = 0, len = videos.length; i < len; i++) {
+            if (videos[i] !== e.target) {
+                videos[i].pause();
+            }
+        }
+    }, true);
+});
 </script>

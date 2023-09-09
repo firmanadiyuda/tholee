@@ -42,20 +42,14 @@
     </div>
 </template>
 
-<script>
-export default {
-    data() {
-        return {
-            projects: {
-                // robotikauns: {
-                //     judul: "ROBOTIKA UNS",
-                //     kategori: "company profile",
-                //     jobdesk: "all in",
-                //     url: "https://www.youtube.com/embed/garImIs1Isc",
-                //     deskripsi: "Memperkenalkan Unit Kegiatan Mahasiswa Robotika di Universitas Sebelas Maret dengan konsep 'freezing time' untuk merepresentasikan ruang gerak yang terbatas di saat pandemi Covid-19."
-                // },
-            }
-        };
-    },
-}
+<script setup lang="ts">
+import { ref } from 'vue';
+
+useHead({
+    title: 'Company Profile',
+})
+
+const projects = ref({
+})
+
 </script>

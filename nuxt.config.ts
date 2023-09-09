@@ -8,7 +8,8 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Tholee Studio',
+      // title: 'Tholee Studio',
+      titleTemplate: '%s - Tholee Studio',
       htmlAttrs: {
         lang: 'en',
       },

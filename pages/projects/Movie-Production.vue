@@ -42,27 +42,21 @@
     </div>
 </template>
 
-<script>
-export default {
-    data() {
-        return {
-            projects: {
-                // tamanbalekambang: {
-                //     judul: "TAMAN BALEKAMBANG",
-                //     kategori: "short documentary",
-                //     jobdesk: "consultant",
-                //     url: "https://www.youtube.com/embed/QEVK9oK_ESs",
-                //     deskripsi: "Film pendek dokumenter yang memperkenalkan Taman Balekambang yang berlokasi di Surakarta. Peran Tholee Studio dalam produksi film pendek ini adalah sebagai consultant."
-                // },
-                onedayinsolo: {
-                    judul: "ONE DAY IN SOLO",
-                    kategori: "short movie",
-                    jobdesk: "editing",
-                    url: "https://www.youtube.com/embed/qp1EPiJIAlo",
-                    deskripsi: "Film pendek yang menceritakan 2 orang sahabat yang bertemu di kota Surakarta dan kemudian keliling kota mengunjungi tempat-tempat ikonik."
-                },
-            }
-        };
+<script setup lang="ts">
+import { ref } from 'vue';
+
+useHead({
+    title: 'Movie Production',
+})
+
+const projects = ref({
+    onedayinsolo: {
+        judul: "ONE DAY IN SOLO",
+        kategori: "short movie",
+        jobdesk: "editing",
+        url: "https://www.youtube.com/embed/qp1EPiJIAlo",
+        deskripsi: "Film pendek yang menceritakan 2 orang sahabat yang bertemu di kota Surakarta dan kemudian keliling kota mengunjungi tempat-tempat ikonik."
     },
-}
+})
+
 </script>

@@ -42,41 +42,35 @@
     </div>
 </template>
 
-<script>
-export default {
-    data() {
-        return {
-            projects: {
-                berjuangbersamamorula2: {
-                    judul: "BERJUANG BERSAMA MORULA #2",
-                    kategori: "tv commercial",
-                    jobdesk: "all in",
-                    url: "https://www.youtube.com/embed/dg8XJogStgA",
-                    deskripsi: "Video ini merupakan video testimoni salah satu pasien program kehamilan bayi tabung di Morula IVF Yogyakarta."
-                },
-                berjuangbersamamorula: {
-                    judul: "BERJUANG BERSAMA MORULA",
-                    kategori: "tv commercial",
-                    jobdesk: "all in",
-                    url: "https://www.youtube.com/embed/3bHhOnVPiE4",
-                    deskripsi: "Video ini merupakan video testimoni salah satu pasien program kehamilan bayi tabung di Morula IVF Yogyakarta."
-                },
-                malingdata: {
-                    judul: "MALING DATA",
-                    kategori: "public service announcement",
-                    jobdesk: "all in",
-                    url: "https://www.youtube.com/embed/_IqVofcfJCw",
-                    deskripsi: "Maling data mengedukasi penonton bahwa kita tidak boleh sembarangan mengisi data pribadi pada situs yang kredibilitasnya tidak dapat dipercaya."
-                },
-                // prokessmkbatik2: {
-                //     judul: "PROKES NEW NORMAL",
-                //     kategori: "public service announcement",
-                //     jobdesk: "all in",
-                //     url: "https://www.youtube.com/embed/fWTWTZ2ExOA",
-                //     deskripsi: "Video ini mengedukasi penonton tentang protokol kesehatan yang diberlakukan di SMK Batik 2 Surakarta pada saat era New Normal."
-                // },
-            }
-        };
+<script setup lang="ts">
+import { ref } from 'vue';
+
+useHead({
+    title: 'TVC / PSA',
+})
+
+const projects = ref({
+    berjuangbersamamorula2: {
+        judul: "BERJUANG BERSAMA MORULA #2",
+        kategori: "tv commercial",
+        jobdesk: "all in",
+        url: "https://www.youtube.com/embed/dg8XJogStgA",
+        deskripsi: "Video ini merupakan video testimoni salah satu pasien program kehamilan bayi tabung di Morula IVF Yogyakarta."
     },
-}
+    berjuangbersamamorula: {
+        judul: "BERJUANG BERSAMA MORULA",
+        kategori: "tv commercial",
+        jobdesk: "all in",
+        url: "https://www.youtube.com/embed/3bHhOnVPiE4",
+        deskripsi: "Video ini merupakan video testimoni salah satu pasien program kehamilan bayi tabung di Morula IVF Yogyakarta."
+    },
+    malingdata: {
+        judul: "MALING DATA",
+        kategori: "public service announcement",
+        jobdesk: "all in",
+        url: "https://www.youtube.com/embed/_IqVofcfJCw",
+        deskripsi: "Maling data mengedukasi penonton bahwa kita tidak boleh sembarangan mengisi data pribadi pada situs yang kredibilitasnya tidak dapat dipercaya."
+    },
+})
+
 </script>

@@ -22,7 +22,7 @@
                     <label for="kontakmodal" class="btn btn-sm btn-accent">Tutup</label>
                 </div> -->
                 <div class="text-right mb-8">
-                    <label for="kontakmodal" class="btn btn-error btn-outline btn-sm btn-accent">X</label>
+                    <label for="kontakmodal" class="btn btn-error btn-outline btn-sm">X</label>
                 </div>
 
                 <!-- <a href="https://go.tholee.my.id/booking" target="_blank"

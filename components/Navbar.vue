@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar fixed top-0 left-0 right-0 shadow-xl backdrop-blur-md bg-secondary/40 z-50 py-3">
+  <div class="navbar fixed top-0 left-0 right-0 shadow-xl backdrop-blur-md bg-secondary/40 z-[60] py-3">
 
     <div class="navbar-start font-light">
       <details class="dropdown text-secondary">

@@ -175,7 +175,7 @@
                 </div>
 
                 <div
-                    class="hero relative p-10 w-full m-auto rounded-xl bg-gradient-to-br from-neutral-100 to-neutral-600 z-10">
+                    class="hero relative px-5 py-10 md:px-10 md:py-10 w-full m-auto rounded-xl bg-gradient-to-br from-neutral-100 to-neutral-600 z-10">
                     <div class="hero-content flex-col lg:flex-row-reverse">
                         <div>
                             <h1 class="text-5xl font-bold text-primary uppercase"><span class="font-normal">Cuma</span>

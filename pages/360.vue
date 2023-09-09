@@ -179,7 +179,7 @@
                     <div class="hero-content flex-col lg:flex-row-reverse">
                         <div>
                             <h1 class="text-5xl font-bold text-primary uppercase"><span class="font-normal">Cuma</span>
-                                {{ harga }}<span class="font-normal">/jam!*</span></h1>
+                                {{ harga }}<span class="font-normal"> /jam!*</span></h1>
                             <p class="py-6 text-primary font-montserrat font-medium text-md">Garansi harga termurah
                                 se-Indonesia! Jika kamu menemukan vendor lain dengan harga yang lebih murah dari kami dengan
                                 fitur serupa, kami akan berikan harga tersebut pada kamu. <br> <br> Hubungi kami dengan klik

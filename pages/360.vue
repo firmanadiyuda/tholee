@@ -2,15 +2,22 @@
     <div>
         <Navbar />
 
-        <div v-if="diskon" class="fixed mt-[71px] z-[50] w-full px-5">
+
+
+        <!-------------------------------- ALERT ------------------------------>
+        <div v-if="alert" class="fixed mt-[71px] z-[50] w-full px-5">
             <div class="flex rounded-b-lg p-5 bg-yellow-400/90 max-w-2xl m-auto backdrop-blur-md text-primary text-left">
                 <div class="bg-primary rounded-full m-auto p-2 mr-3">
                     <i class="ri-price-tag-3-fill text-yellow-400 ri-lg shrink-0 m-auto"></i>
                 </div>
-                <span class="font-normal font-poppins text-sm m-auto" v-html="diskon"></span>
+                <span class="font-normal font-poppins text-sm m-auto" v-html="alert"></span>
             </div>
         </div>
+        <!---------------------------- END OF ALERT ---------------------------->
 
+
+
+        <!-------------------------------- HERO ------------------------------>
         <div class="hero min-h-screen bg-primary">
             <div class="hero-content text-center z-40">
                 <div class="max-w-xl">
@@ -25,208 +32,203 @@
             </div>
             <WavePrimary />
         </div>
+        <!---------------------------- END OF HERO ---------------------------->
 
 
-        <div id="pengertian">
-            <div class="hero min-h-screen bg-secondary">
-                <div class="hero-content flex-col lg:flex-row py-20 lg:px-10 gap-10 z-40">
-                    <img src="/assets/img/promo/360/booth.jpg" class="w-full max-w-sm shadow-2xl rounded-3xl" />
-                    <div class="text-accent max-w-sm lg:max-w-full">
-                        <!-- <div class="badge badge-accent badge-lg text-secondary font-normal mb-2 uppercase">Pengertian</div> -->
-                        <h1 class="text-[2.9rem] font-bold text-yellow-400 leading-none">360 Videobooth <span
-                                class="text-white font-light">Itu Apa Sih?</span></h1>
 
-                        <p class="py-6 text-accent text-sm font-montserrat">Merupakan layanan videobooth yang unik
-                            dengan menggunakan kamera yang merekam secara berputar 360 derajat dibantu dengan alat khusus
-                            otomatis. Hasil video kemudian diproses dan bisa langsung didownload oleh tamu
-                            undangan/pengunjung di acara kamu menggunakan QR code secara instan.</p>
+        <!-------------------------------- PENGERTIAN ------------------------------>
+        <div id="pengertian" class="hero min-h-screen bg-secondary">
+            <div class="hero-content flex-col lg:flex-row py-20 lg:px-10 gap-10 z-40">
+                <img src="/assets/img/promo/360/booth.jpg" class="w-full max-w-sm shadow-2xl rounded-3xl" />
+                <div class="text-accent max-w-sm lg:max-w-full">
+                    <h1 class="text-[2.9rem] font-bold text-yellow-400 leading-none">360 Videobooth <span
+                            class="text-white font-light">Itu Apa Sih?</span></h1>
 
-                        <p class="text-accent text-sm font-montserrat">Beberapa poin keunggulan layanan <b>360
-                                Videobooth</b> dari kami yaitu:
-                        <ul class="pb-6 list-disc ml-10 mt-3 text-sm text-yellow-500 font-montserrat font-bold">
-                            <li>QR Code langsung keluar (printed)</li>
-                            <li>Cloud Google Drive gallery real-time</li>
-                            <li>Jaminan harga TERMURAH se-Indonesia!</li>
-                        </ul>
-                        </p>
+                    <p class="py-6 text-accent text-sm font-montserrat">Merupakan layanan videobooth yang unik
+                        dengan menggunakan kamera yang merekam secara berputar 360 derajat dibantu dengan alat khusus
+                        otomatis. Hasil video kemudian diproses dan bisa langsung didownload oleh tamu
+                        undangan/pengunjung di acara kamu menggunakan QR code secara instan.</p>
 
-                        <p class="pb-6 text-accent text-sm font-montserrat">Video hasil <b>360 Videobooth</b> dapat
-                            ditambahkan watermark berupa logo perusahaan atau acara, brand produk dan juga dapat dimasukkan
-                            soundtrack atau jingle produk yang akan meningkatkan <i>Brand Awareness</i> produk atau <i>Brand
-                                Activation</i> saat para tamu undangan/pengunjung share ke akun media sosial mereka.
-                        </p>
-                    </div>
-                </div>
-                <WaveSecondary />
+                    <p class="text-accent text-sm font-montserrat">Beberapa poin keunggulan layanan <b>360
+                            Videobooth</b> dari kami yaitu:
+                    <ul class="pb-6 list-disc ml-10 mt-3 text-sm text-yellow-500 font-montserrat font-bold">
+                        <li>QR Code langsung keluar (printed)</li>
+                        <li>Cloud Google Drive gallery real-time</li>
+                        <li>Jaminan harga TERMURAH se-Indonesia!</li>
+                    </ul>
+                    </p>
 
-            </div>
-        </div>
-
-
-        <div>
-            <div id="advantages" class="py-24 px-7 xl:px-48 bg-primary">
-                <div
-                    class="transition-all duration-300 ease-in-out text-5xl text-center w-full font-bold text-white/50 hover:text-white pb-16 tracking-normal hover:tracking-widest">
-                    <span class="font-extralight">THE</span> <span class="text-yellow-400">ADVANTAGES</span>
-                </div>
-
-                <div class="grid lg:grid-cols-3 gap-12 ">
-                    <div v-for="jasa in jasas" :key="jasa.nama"
-                        class="z-40 transition-all duration-200 ease-in-out outline-none outline-1 outline-accent/5 hover:outline-accent/70 hover:-translate-y-5 card max-w-sm lg:max-w-full mx-auto bg-secondary/70 shadow-xl text-accent">
-                        <figure class="bg-neutral-800">
-                            <img :src="jasa.ilustrasi" class="px-10 py-5" />
-                        </figure>
-                        <div class="card-body">
-                            <h2 class="card-title tracking-wide font-bold text-white uppercase">{{ jasa.nama }}</h2>
-                            <p class="opacity-70 font-montserrat text-sm">{{ jasa.deskripsi }}</p>
-                        </div>
-                    </div>
+                    <p class="pb-6 text-accent text-sm font-montserrat">Video hasil <b>360 Videobooth</b> dapat
+                        ditambahkan watermark berupa logo perusahaan atau acara, brand produk dan juga dapat dimasukkan
+                        soundtrack atau jingle produk yang akan meningkatkan <i>Brand Awareness</i> produk atau <i>Brand
+                            Activation</i> saat para tamu undangan/pengunjung share ke akun media sosial mereka.
+                    </p>
                 </div>
             </div>
-            <WavePrimary />
-        </div>
 
-
-
-
-        <div>
-            <div id="samples" class="py-24 px-7 xl:px-48 bg-secondary">
-                <div
-                    class="transition-all duration-300 ease-in-out text-5xl text-center w-full font-bold text-white/50 hover:text-white pb-16 tracking-normal hover:tracking-widest">
-                    <span class="font-extralight">THE</span> <span class="text-yellow-400">SAMPLES</span>
-                </div>
-
-                <div class="grid lg:grid-cols-5 gap-12 ">
-                    <div v-for="sample in samples"
-                        class="z-40 transition-all duration-200 ease-in-out outline-none outline-1 outline-accent/5 hover:outline-accent/70 hover:-translate-y-5 card max-w-sm lg:max-w-full mx-auto bg-secondary/70 shadow-xl text-accent">
-
-                        <div class="card-body p-0">
-                            <div>
-                                <video width="265" height="300" controls controlslist="nodownload"
-                                    class="rounded-xl shadow-xl">
-                                    <source :src="'https://drive.google.com/uc?export=download&id=' + sample.id"
-                                        type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <WaveSecondary />
         </div>
+        <!---------------------------- END OF PENGERTIAN ---------------------------->
 
 
 
-
-        <div>
-            <div id="equipments" class="py-24 px-7 xl:px-48 bg-primary">
-                <div
-                    class="transition-all duration-300 ease-in-out text-5xl text-center w-full font-bold text-white/50 hover:text-white pb-16 tracking-normal hover:tracking-widest">
-                    <span class="font-extralight">THE</span> <span class="text-yellow-400">EQUIPMENTS</span>
-                </div>
-
-                <div class="grid lg:grid-cols-4 gap-12">
-                    <div v-for="equipment in equipments" :key="equipment.judul"
-                        class="z-40 transition-all duration-200 ease-in-out outline-none outline-1 outline-accent/5 hover:outline-accent/70 hover:-translate-y-5 card w-[100%] max-w-sm mx-auto bg-secondary/70 shadow-xl text-accent">
-                        <div class="card-body w-full">
-                            <h2 class="card-title tracking-wide font-bold text-white uppercase">{{ equipment.judul }}</h2>
-                            <p class="opacity-70 font-montserrat text-sm w-full">{{ equipment.deskripsi }}</p>
-                        </div>
-                    </div>
-                </div>
+        <!-------------------------------- SAMPLES ------------------------------>
+        <div id="samples" class="py-24 px-7 xl:px-48 bg-primary">
+            <div
+                class="transition-all duration-300 ease-in-out text-5xl text-center w-full font-bold text-white/50 hover:text-white pb-16 tracking-normal hover:tracking-widest">
+                <span class="font-extralight">THE</span> <span class="text-yellow-400">SAMPLES</span>
             </div>
-            <WavePrimary />
-        </div>
 
+            <div class="grid lg:grid-cols-5 gap-12 ">
+                <div v-for="sample in samples"
+                    class="z-40 transition-all duration-200 ease-in-out outline-none outline-1 outline-accent/5 hover:outline-accent/70 hover:-translate-y-5 card max-w-sm lg:max-w-full mx-auto bg-secondary/70 shadow-xl text-accent">
 
-
-
-        <div>
-            <div id="flowcharts" class="py-24 px-7 xl:px-48 bg-secondary">
-                <div
-                    class="transition-all duration-300 ease-in-out text-5xl text-center w-full font-bold text-white/50 hover:text-white pb-16 tracking-normal hover:tracking-widest">
-                    <span class="font-extralight">THE</span> <span class="text-yellow-400">FLOWCHART</span>
-                </div>
-
-                <ol class="relative border-l border-gray-700 max-w-sm m-auto z-10">
-                    <li v-for="flowchart in flowcharts" :key="flowchart.nomor" class="mb-10 ml-6">
-                        <span
-                            class="absolute mt-1 flex items-center justify-center w-6 h-6 bg-yellow-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-yellow-600 font-bold text-sm text-primary">
-                            {{ flowchart.nomor }}
-                        </span>
-                        <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">{{ flowchart.judul }}</h3>
-                        <p class="text-sm font-montserrat text-gray-400" v-html="flowchart.deskripsi">
-                        </p>
-                    </li>
-                </ol>
-
-            </div>
-            <WaveSecondary />
-        </div>
-
-
-
-
-        <div>
-            <div id="cta" class="py-24 px-7 xl:px-48 bg-primary">
-                <div
-                    class="transition-all duration-300 ease-in-out text-5xl text-center w-full font-bold text-white/50 hover:text-white pb-16 tracking-normal hover:tracking-widest">
-                </div>
-
-                <div
-                    class="hero relative px-5 py-10 md:px-10 md:py-10 w-full m-auto rounded-xl bg-gradient-to-br from-neutral-100 to-neutral-600 z-10">
-                    <div class="hero-content flex-col lg:flex-row-reverse">
+                    <div class="card-body p-0">
                         <div>
-                            <h1 class="text-5xl font-bold text-primary uppercase"><span class="font-normal">Cuma</span>
-                                {{ harga }}<span class="font-normal"> /jam!*</span></h1>
-                            <p class="py-6 text-primary font-montserrat font-medium text-sm md:text-lg">Garansi harga
-                                termurah
-                                se-Indonesia! Jika kamu menemukan vendor lain dengan harga yang lebih murah dari kami dengan
-                                fitur serupa, kami akan berikan harga tersebut pada kamu. <br> <br> Hubungi kami dengan klik
-                                tombol dibawah ini. <br> Tenang! mau tanya tanya dulu juga boleh kok, gausah sungkan yaa...
-                            </p>
-                            <a href="https://wa.me/6289525009655" target="_blank" class="btn btn-primary"><i
-                                    class="ri-whatsapp-line ri-lg"></i> Hubungi Kami</a>
+                            <video width="265" height="300" controls controlslist="nodownload" class="rounded-xl shadow-xl">
+                                <source :src="'https://drive.google.com/uc?export=download&id=' + sample.id"
+                                    type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                     </div>
-                </div>
-                <div class="font-montserrat text-sm mt-4 text-neutral-300 relative z-10">
-                    * Minimal 3 jam.
-                </div>
 
+                </div>
             </div>
-            <WavePrimary />
+
         </div>
+        <WavePrimary />
+        <!---------------------------- END OF SAMPLES ---------------------------->
 
 
 
+        <!-------------------------------- ADVANTAGES ------------------------------>
+        <div id="advantages" class="py-24 px-7 xl:px-48 bg-secondary">
+            <div
+                class="transition-all duration-300 ease-in-out text-5xl text-center w-full font-bold text-white/50 hover:text-white pb-16 tracking-normal hover:tracking-widest">
+                <span class="font-extralight">THE</span> <span class="text-yellow-400">ADVANTAGES</span>
+            </div>
 
-        <div>
-            <div id="faqs" class="py-24 px-7 xl:px-48 bg-secondary">
-                <div
-                    class="transition-all duration-300 ease-in-out text-5xl text-center w-full font-bold text-white/50 hover:text-whitet racking-normal pb-16 hover:tracking-widest">
-                    <span class="font-extralight">THE</span> <span class="text-yellow-400">FAQ</span>
-                </div>
-
-                <div class="z-10 relative max-w-xl m-auto">
-                    <div v-for="faq in faqs" class="collapse collapse-arrow bg-neutral-800 border border-neutral-700 my-5">
-                        <input type="radio" name="my-accordion-2" />
-                        <div class="collapse-title text-xl font-medium">
-                            {{ faq.pertanyaan }}
-                        </div>
-                        <div class="collapse-content font-montserrat font-normal text-sm text-neutral-400">
-                            <p v-html="faq.jawaban"></p>
-                        </div>
+            <div class="grid lg:grid-cols-3 gap-12 ">
+                <div v-for="jasa in jasas" :key="jasa.nama"
+                    class="z-40 transition-all duration-200 ease-in-out outline-none outline-1 outline-accent/20 hover:outline-accent/70 hover:-translate-y-5 card max-w-sm lg:max-w-full mx-auto bg-secondary/70 shadow-xl text-accent">
+                    <figure class="bg-neutral-800">
+                        <img :src="jasa.ilustrasi" class="px-10 py-5" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title tracking-wide font-bold text-white uppercase">{{ jasa.nama }}</h2>
+                        <p class="opacity-70 font-montserrat text-sm">{{ jasa.deskripsi }}</p>
                     </div>
                 </div>
-
-
             </div>
-            <WaveSecondary />
         </div>
+        <WaveSecondary />
+        <!---------------------------- END OF ADVANTAGES ---------------------------->
 
 
+
+        <!-------------------------------- WORKFLOWS ------------------------------>
+        <div id="workflows" class="py-24 px-7 xl:px-48 bg-primary">
+            <div
+                class="transition-all duration-300 ease-in-out text-5xl text-center w-full font-bold text-white/50 hover:text-white pb-16 tracking-normal hover:tracking-widest">
+                <span class="font-extralight">THE</span> <span class="text-yellow-400">WORKFLOW</span>
+            </div>
+
+            <ol class="relative border-l border-gray-700 max-w-sm m-auto z-10">
+                <li v-for="workflow in workflows" :key="workflow.nomor" class="mb-10 ml-6">
+                    <span
+                        class="absolute mt-1 flex items-center justify-center w-6 h-6 bg-yellow-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-yellow-600 font-bold text-sm text-primary">
+                        {{ workflow.nomor }}
+                    </span>
+                    <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">{{ workflow.judul }}</h3>
+                    <p class="text-sm font-montserrat text-gray-400" v-html="workflow.deskripsi">
+                    </p>
+                </li>
+            </ol>
+
+        </div>
+        <WavePrimary />
+        <!---------------------------- END OF WORKFLOWS ---------------------------->
+
+
+
+        <!-------------------------------- EQUIPMENTS ------------------------------>
+        <div id="equipments" class="py-24 px-7 xl:px-48 bg-secondary">
+            <div
+                class="transition-all duration-300 ease-in-out text-5xl text-center w-full font-bold text-white/50 hover:text-white pb-16 tracking-normal hover:tracking-widest">
+                <span class="font-extralight">THE</span> <span class="text-yellow-400">EQUIPMENTS</span>
+            </div>
+
+            <div class="grid lg:grid-cols-4 gap-12">
+                <div v-for="equipment in equipments" :key="equipment.judul"
+                    class="z-40 transition-all duration-200 ease-in-out outline-none outline-1 outline-accent/20 hover:outline-accent/70 hover:-translate-y-5 card w-[100%] max-w-sm mx-auto bg-primary shadow-xl text-accent">
+                    <div class="card-body w-full">
+                        <h2 class="card-title tracking-wide font-bold text-white uppercase">{{ equipment.judul }}</h2>
+                        <p class="opacity-70 font-montserrat text-sm w-full">{{ equipment.deskripsi }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <WaveSecondary />
+        <!---------------------------- END OF EQUIPMENTS ---------------------------->
+
+
+
+        <!-------------------------------- CALL TO ACTION ------------------------------>
+        <div id="cta" class="py-24 px-7 xl:px-48 bg-primary">
+            <div
+                class="transition-all duration-300 ease-in-out text-5xl text-center w-full font-bold text-white/50 hover:text-white pb-16 tracking-normal hover:tracking-widest">
+            </div>
+
+            <div
+                class="hero relative px-5 py-10 md:px-10 md:py-10 w-full m-auto rounded-xl bg-gradient-to-br from-neutral-100 to-neutral-600 z-10">
+                <div class="hero-content flex-col lg:flex-row-reverse">
+                    <div>
+                        <h1 class="text-5xl font-bold text-primary uppercase"><span class="font-normal">Cuma</span>
+                            {{ harga }}<span class="font-normal"> /jam!*</span></h1>
+                        <p class="py-6 text-primary font-montserrat font-medium text-sm md:text-lg">Garansi harga
+                            termurah
+                            se-Indonesia! Jika kamu menemukan vendor lain dengan harga yang lebih murah dari kami dengan
+                            fitur serupa, kami akan berikan harga tersebut pada kamu. <br> <br> Hubungi kami dengan klik
+                            tombol dibawah ini. <br> Tenang! mau tanya tanya dulu juga boleh kok, gausah sungkan yaa...
+                        </p>
+                        <a href="https://wa.me/6289525009655" target="_blank" class="btn btn-primary"><i
+                                class="ri-whatsapp-line ri-lg"></i> Hubungi Kami</a>
+                    </div>
+                </div>
+            </div>
+            <div class="font-montserrat text-sm mt-4 text-neutral-300 relative z-10">
+                * Minimal 3 jam.
+            </div>
+
+        </div>
+        <WavePrimary />
+        <!---------------------------- END OF CALL TO ACTION ---------------------------->
+
+
+
+        <!-------------------------------- FAQS ------------------------------>
+        <div id="faqs" class="py-24 px-7 xl:px-48 bg-secondary">
+            <div
+                class="transition-all duration-300 ease-in-out text-5xl text-center w-full font-bold text-white/50 hover:text-whitet racking-normal pb-16 hover:tracking-widest">
+                <span class="font-extralight">THE</span> <span class="text-yellow-400">FAQ</span>
+            </div>
+
+            <div class="z-10 relative max-w-xl m-auto">
+                <div v-for="faq in faqs" class="collapse collapse-arrow bg-neutral-800 border border-neutral-700 my-5">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-md font-medium font-poppins text-accent/80">
+                        {{ faq.pertanyaan }}
+                    </div>
+                    <div class="collapse-content font-montserrat font-normal text-sm text-neutral-400">
+                        <hr class="-mt-2 mb-7 border-yellow-500 border-dashed">
+                        <p v-html="faq.jawaban"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <WaveSecondary />
+        <!---------------------------- END OF FAQS ---------------------------->
 
 
 
@@ -241,13 +243,28 @@ useHead({
     title: '360 Videobooth',
 })
 
+onMounted(() => {
+    document.addEventListener('play', (e) => {
+        const videos = document.getElementsByTagName('video');
+        for (let i = 0, len = videos.length; i < len; i++) {
+            if (videos[i] !== e.target) {
+                videos[i].pause();
+            }
+        }
+    }, true);
+});
+
+
+
 const harga = ref("749.000")
-const diskon = ref("Diskon <b>10%</b> khusus untuk booking acara di bulan September 2023!")
+const alert = ref("Diskon <b>10%</b> khusus untuk booking acara di bulan September 2023!")
+
+// Data Jasa
 const jasas = ref({
-    qr: {
-        nama: "Kode QR Instan",
-        deskripsi: "Kode QR untuk mendownload hasil dari 360 Videobooth langsung dicetak secara instan dan diberikan ke tamu undangan/pengunjung.",
-        ilustrasi: "/assets/img/promo/360/advantages/instan.png"
+    brand: {
+        nama: "Brand Awareness",
+        deskripsi: "Acara kamu akan mendapatkan exposure lebih luas karena setiap pengunjung akan memposting di sosial media mereka.",
+        ilustrasi: "/assets/img/promo/360/advantages/brand.png"
     },
     harga: {
         nama: "Harga Termurah",
@@ -259,10 +276,10 @@ const jasas = ref({
         deskripsi: "Kamu bisa memilih fasilitas dan fitur yang akan digunakan sesuai kebutuhan seperti kustom overlay atau menambahkan musik.",
         ilustrasi: "/assets/img/promo/360/advantages/fleksibel.png"
     },
-    brand: {
-        nama: "Brand Awareness",
-        deskripsi: "Acara kamu akan mendapatkan exposure lebih luas karena setiap pengunjung akan memposting di sosial media mereka.",
-        ilustrasi: "/assets/img/promo/360/advantages/brand.png"
+    qr: {
+        nama: "Kode QR Instan",
+        deskripsi: "Kode QR untuk mendownload hasil dari 360 Videobooth langsung dicetak secara instan dan diberikan ke tamu undangan/pengunjung.",
+        ilustrasi: "/assets/img/promo/360/advantages/instan.png"
     },
     kamera: {
         nama: "Peralatan Terbaik",
@@ -276,6 +293,7 @@ const jasas = ref({
     },
 })
 
+// Data Samples
 const samples = ref({
     satu: {
         id: "1z22buaWSx-nXxzKygt7ivXLPghp2JfR4"
@@ -294,6 +312,7 @@ const samples = ref({
     },
 })
 
+// Data Equipments
 const equipments = ref({
     satu: {
         judul: "1 Spinner Setup",
@@ -329,7 +348,8 @@ const equipments = ref({
     },
 })
 
-const flowcharts = ref({
+// Data Workflows
+const workflows = ref({
     satu: {
         nomor: 1,
         judul: "Persiapan",
@@ -362,6 +382,7 @@ const flowcharts = ref({
     }
 })
 
+// Data FAQs
 const faqs = ref({
     maxvideo: {
         pertanyaan: "Berapa banyak batas maksimal video?",
@@ -394,14 +415,4 @@ const faqs = ref({
 })
 
 
-onMounted(() => {
-    document.addEventListener('play', (e) => {
-        const videos = document.getElementsByTagName('video');
-        for (let i = 0, len = videos.length; i < len; i++) {
-            if (videos[i] !== e.target) {
-                videos[i].pause();
-            }
-        }
-    }, true);
-});
 </script>

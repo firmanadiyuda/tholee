@@ -8,7 +8,6 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      // title: 'Tholee Studio',
       titleTemplate: '%s - Tholee Studio',
       htmlAttrs: {
         lang: 'en',
@@ -24,8 +23,12 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    // '@nuxtjs/axios',
+    'nuxt-gtag',
   ],
+
+  gtag: {
+    id: 'G-X5Z1WSJFLM'
+  },
 
   postcss: {
     plugins: {

@@ -192,7 +192,7 @@
                             fitur serupa, kami akan berikan harga tersebut pada kamu. <br> <br> Hubungi kami dengan klik
                             tombol dibawah ini. <br> Tenang! mau tanya tanya dulu juga boleh kok, gausah sungkan yaa...
                         </p>
-                        <a href="https://wa.me/6289525009655" target="_blank" class="btn btn-primary"><i
+                        <a href="/wa" target="_blank" class="btn btn-primary"><i
                                 class="ri-whatsapp-line ri-lg"></i> Hubungi Kami</a>
                     </div>
                 </div>

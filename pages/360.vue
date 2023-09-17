@@ -256,7 +256,7 @@ onMounted(() => {
 
 
 
-const harga = ref("749.000")
+const harga = ref("899.000")
 const alert = ref("Diskon <b>10%</b> khusus untuk booking acara di bulan September 2023!")
 
 // Data Jasa

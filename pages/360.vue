@@ -248,7 +248,6 @@ useHead({
     title: '360 Videobooth',
 })
 
-gtag('config', 'AW-11331048544');
 
 const hubungiKami = (url: string) => {
     var callback = function () {
@@ -256,6 +255,7 @@ const hubungiKami = (url: string) => {
             window.open(url,'_blank')
         }
     };
+    gtag('config', 'AW-11331048544');
     gtag('event', 'conversion', {
         'send_to': 'AW-11331048544/7oNMCLazzOQYEOCoiJsq',
         'event_callback': callback

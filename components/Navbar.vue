@@ -19,8 +19,7 @@
             w-36
           ">
           <li v-for="menu in menus" :key="menu.title">
-            <details v-if="menu.submenus"
-              class="dropdown dropdown-bottom hover:bg-accent hover:text-secondary">
+            <details v-if="menu.submenus" class="dropdown dropdown-bottom hover:bg-accent hover:text-secondary">
               <summary class="flex">
                 {{ menu.title }}
               </summary>
@@ -68,13 +67,82 @@
     </div>
 
     <div class="navbar-end">
-      <label for="kontakmodal" class="btn btn-accent"><i class="ri-calendar-check-fill ri-lg"></i> &nbsp;
-        BOOKING</label>
+      <button @click="hubungiKami('https://wa.me/6289525009655')" class="btn btn-accent"><i
+          class="ri-whatsapp-line ri-lg"></i> Hubungi
+        Kami</button>
     </div>
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref } from 'vue';
+const { gtag } = useGtag()
+
+const mobileMenuOpen = ref(false);
+
+const menus = {
+  beranda: {
+    title: 'Beranda',
+    url: '/'
+  },
+  projects: {
+    title: 'Projects',
+    url: '',
+    submenus: {
+      profile: {
+        title: 'Company Profile',
+        url: '/projects/company-profile'
+      },
+      documentary: {
+        title: 'Creative Documentary',
+        url: '/projects/creative-documentary'
+      },
+      movie: {
+        title: 'Movie Production',
+        url: '/projects/movie-production'
+      },
+      tvcpsa: {
+        title: 'TVC/PSA',
+        url: '/projects/tvc-psa'
+      },
+      promotional: {
+        title: 'Event Promotional',
+        url: '/projects/event-promotional'
+      },
+      videobooth: {
+        title: 'Photo/Videobooth',
+        url: '/projects/photo-videobooth'
+      },
+    }
+  }
+};
+
+const toggleMobileMenu = () => {
+  mobileMenuOpen.value = !mobileMenuOpen.value;
+  const mobileDropdown = document.querySelector('.mobile-dropdown');
+  if (mobileMenuOpen.value) {
+    mobileDropdown.classList.add('open');
+  } else {
+    mobileDropdown.classList.remove('open');
+  }
+};
+
+const hubungiKami = (url) => {
+  var callback = function () {
+    if (typeof (url) != 'undefined') {
+      window.open(url, '_blank');
+    }
+  };
+  gtag('config', 'AW-11331048544');
+  gtag('event', 'conversion', {
+    'send_to': 'AW-11331048544/7oNMCLazzOQYEOCoiJsq',
+    'event_callback': callback
+  });
+  return false;
+};
+</script>
+
+<!-- <script>
 export default {
   name: 'Navbar',
   data() {
@@ -127,7 +195,20 @@ export default {
         this.$refs.mobileDropdown.classList.remove('open');
       }
     },
-    // ...
+
+    hubungiKami(url) {
+      var callback = function () {
+        if (typeof (url) != 'undefined') {
+          window.open(url, '_blank')
+        }
+      };
+      gtag('config', 'AW-11331048544');
+      gtag('event', 'conversion', {
+        'send_to': 'AW-11331048544/7oNMCLazzOQYEOCoiJsq',
+        'event_callback': callback
+      });
+      return false;
+    }
   },
 }
-</script>
+</script> -->

@@ -248,6 +248,8 @@ useHead({
     title: '360 Videobooth',
 })
 
+gtag('config', 'AW-11331048544');
+
 const hubungiKami = (url: string) => {
     var callback = function () {
         if (typeof (url) != 'undefined') {

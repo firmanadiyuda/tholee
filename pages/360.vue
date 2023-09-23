@@ -192,8 +192,8 @@
                             fitur serupa, kami akan berikan harga tersebut pada kamu. <br> <br> Hubungi kami dengan klik
                             tombol dibawah ini. <br> Tenang! mau tanya tanya dulu juga boleh kok, gausah sungkan yaa...
                         </p>
-                        <a href="/wa" target="_blank" class="btn btn-primary"><i
-                                class="ri-whatsapp-line ri-lg"></i> Hubungi Kami</a>
+                        <button @click="hubungiKami('https://wa.me/6289525009655')" class="btn btn-primary"><i class="ri-whatsapp-line ri-lg"></i> Hubungi
+                            Kami</button>
                     </div>
                 </div>
             </div>
@@ -240,12 +240,31 @@
 import { onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
 
+const { gtag } = useGtag()
 
 const route = useRoute();
 
 useHead({
     title: '360 Videobooth',
 })
+
+const hubungiKami = (url: string) => {
+    var callback = function () {
+        if (typeof (url) != 'undefined') {
+            window.open(url,'_blank')
+        }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-11331048544/7oNMCLazzOQYEOCoiJsq',
+        'event_callback': callback
+    });
+    return false;
+};
+
+
+// function gtag_report_conversion(url) {
+// }
+
 
 onMounted(() => {
     document.addEventListener('play', (e) => {

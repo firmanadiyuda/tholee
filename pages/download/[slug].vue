@@ -99,25 +99,6 @@
     </div>
 </template>
 
-<!-- <script>
-export default {
-    async asyncData({ params, $axios }) {
-        const slug = params.slug // When calling /abc the slug will be "abc"
-        // const result = await $http.$get(`https://api.nuxtjs.dev/results/${params.id}`)
-        // const result = await $axios.$get(`https://ap-southeast-1.aws.data.mongodb-api.com/app/data-ofqhx/endpoint/find?id=${slug}`)
-        const result = await $http.$get(`https://ap-southeast-1.aws.data.mongodb-api.com/app/data-ofqhx/endpoint/find?id=${slug}`)
-
-        // console.log(result)
-        return { slug, result }
-    },
-
-    methods: {
-        reloadPage() {
-            location.reload();
-        }
-    }
-}
-</script> -->
 
 <script setup>
 import { ref, onMounted } from 'vue';

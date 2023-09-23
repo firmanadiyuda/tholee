@@ -5,7 +5,7 @@
 
 
         <!-------------------------------- ALERT ------------------------------>
-        <div v-if="alert" class="fixed mt-[71px] z-[50] w-full px-5">
+        <div v-if="alert_enabled" class="fixed mt-[71px] z-[50] w-full px-5">
             <div class="flex rounded-b-lg p-5 bg-yellow-400/90 max-w-2xl m-auto backdrop-blur-md text-primary text-left">
                 <div class="bg-primary rounded-full m-auto p-2 mr-3">
                     <i class="ri-price-tag-3-fill text-yellow-400 ri-lg shrink-0 m-auto"></i>
@@ -238,6 +238,10 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
+import { useRoute } from 'vue-router';
+
+
+const route = useRoute();
 
 useHead({
     title: '360 Videobooth',
@@ -255,9 +259,20 @@ onMounted(() => {
 });
 
 
+const voucher = ref("G02-100")
+
+const alert_enabled = ref(false)
+const query_url = route.query.voucher
+
+if (query_url == voucher.value) {
+    alert_enabled.value = true
+} else {
+    alert_enabled.value = false
+}
 
 const harga = ref("899.000")
-const alert = ref("Diskon <b>10%</b> khusus untuk booking acara di bulan September 2023!")
+const alert = ref("Diskon <b>10%</b>! beritahu admin kode voucher berikut: <b>" + voucher.value + "</b>")
+
 
 // Data Jasa
 const jasas = ref({

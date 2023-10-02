@@ -21,7 +21,7 @@
         <div class="hero min-h-screen bg-primary">
             <div class="hero-content text-center z-40">
                 <div class="max-w-xl">
-                    <p class="text-xl tracking-[0.3em]"><b>360</b> VIDEOBOOTH</p>
+                    <p class="text-xl tracking-[0.3em]"><b>180</b> PHOTOBOOTH</p>
                     <h1 class="pt-2 text-6xl font-bold text-yellow-400">TERMURAH</h1>
                     <h1 class="pb-8 pt-2 text-5xl">SE-INDONESIA!</h1>
                     <a href="#pengertian" class="btn btn-outline btn-accent normal-case"> <span
@@ -39,18 +39,19 @@
         <!-------------------------------- PENGERTIAN ------------------------------>
         <div id="pengertian" class="hero min-h-screen bg-secondary">
             <div class="hero-content flex-col lg:flex-row py-20 lg:px-10 gap-10 z-40">
-                <img src="/assets/img/promo/360/booth.jpg" class="w-full max-w-sm shadow-2xl rounded-3xl" />
+                <img src="/assets/img/promo/180/booth.jpg" class="w-full max-w-sm shadow-2xl rounded-3xl" />
                 <div class="text-accent max-w-sm lg:max-w-full">
-                    <h1 class="text-[2.9rem] font-bold text-yellow-400 leading-none">360 Videobooth <span
+                    <h1 class="text-[2.9rem] font-bold text-yellow-400 leading-none">180 Photobooth <span
                             class="text-white font-light">Itu Apa Sih?</span></h1>
 
-                    <p class="py-6 text-accent text-sm font-montserrat">Merupakan layanan videobooth yang unik
-                        dengan menggunakan kamera yang merekam secara berputar 360 derajat dibantu dengan alat khusus
-                        otomatis. Hasil video kemudian diproses dan bisa langsung didownload oleh tamu
-                        undangan/pengunjung di acara kamu menggunakan QR code secara instan.</p>
+                    <p class="py-6 text-accent text-sm font-montserrat">Merupakan layanan videobooth yang unik berupa
+                        special effect photography menggunakan teknik bullet-time. Dengan menggunakan banyak kamera yang
+                        mengambil gambar secara bersamaan dari berbagai arah, hasil foto tersebut kemudian dikombinasikan
+                        menjadi sebuah video (mp4) yang bisa langsung didownload oleh tamu undangan/pengunjung di acara kamu
+                        menggunakan QR code secara instan.</p>
 
-                    <p class="text-accent text-sm font-montserrat">Beberapa poin keunggulan layanan <b>360
-                            Videobooth</b> dari kami yaitu:
+                    <p class="text-accent text-sm font-montserrat">Beberapa poin keunggulan layanan <b>180 Photobooth</b>
+                        dari kami yaitu:
                     <ul class="pb-6 list-disc ml-10 mt-3 text-sm text-yellow-500 font-montserrat font-bold">
                         <li>QR Code langsung keluar (printed)</li>
                         <li>Cloud Google Drive gallery real-time</li>
@@ -58,7 +59,7 @@
                     </ul>
                     </p>
 
-                    <p class="pb-6 text-accent text-sm font-montserrat">Video hasil <b>360 Videobooth</b> dapat
+                    <p class="pb-6 text-accent text-sm font-montserrat">Video hasil <b>180 Photobooth</b> dapat
                         ditambahkan watermark berupa logo perusahaan atau acara, brand produk dan juga dapat dimasukkan
                         soundtrack atau jingle produk yang akan meningkatkan <i>Brand Awareness</i> produk atau <i>Brand
                             Activation</i> saat para tamu undangan/pengunjung share ke akun media sosial mereka.
@@ -79,13 +80,13 @@
                 <span class="font-extralight">THE</span> <span class="text-yellow-400">SAMPLES</span>
             </div>
 
-            <div class="grid lg:grid-cols-5 gap-12 ">
+            <div class="grid lg:grid-cols-3 gap-12 ">
                 <div v-for="sample in samples"
                     class="z-40 transition-all duration-200 ease-in-out outline-none outline-1 outline-accent/5 hover:outline-accent/70 hover:-translate-y-5 card max-w-sm lg:max-w-full mx-auto bg-secondary/70 shadow-xl text-accent">
 
                     <div class="card-body p-0">
                         <div>
-                            <video width="265" height="300" controls controlslist="nodownload" class="rounded-xl shadow-xl">
+                            <video width="500" height="300" controls controlslist="nodownload" class="rounded-xl shadow-xl">
                                 <source :src="'https://drive.google.com/uc?export=download&id=' + sample.id"
                                     type="video/mp4">
                                 Your browser does not support the video tag.
@@ -159,7 +160,7 @@
                 <span class="font-extralight">THE</span> <span class="text-yellow-400">EQUIPMENTS</span>
             </div>
 
-            <div class="grid lg:grid-cols-4 gap-12">
+            <div class="grid lg:grid-cols-3 gap-12">
                 <div v-for="equipment in equipments" :key="equipment.judul"
                     class="z-40 transition-all duration-200 ease-in-out outline-none outline-1 outline-accent/20 hover:outline-accent/70 hover:-translate-y-5 card w-[100%] max-w-sm mx-auto bg-primary shadow-xl text-accent">
                     <div class="card-body w-full">
@@ -245,7 +246,7 @@ const { gtag } = useGtag()
 const route = useRoute();
 
 useHead({
-    title: '360 Videobooth',
+    title: '180 Photobooth',
 })
 
 
@@ -287,7 +288,7 @@ if (query_url == voucher.value) {
     alert_enabled.value = false
 }
 
-const harga = ref("899.000")
+const harga = ref("1.399.000")
 const alert = ref("Diskon <b>10%</b>! beritahu admin kode voucher berikut: <b>" + voucher.value + "</b>")
 
 
@@ -310,7 +311,7 @@ const jasas = ref({
     },
     qr: {
         nama: "Kode QR Instan",
-        deskripsi: "Kode QR untuk mendownload hasil dari 360 Videobooth langsung dicetak secara instan dan diberikan ke tamu undangan/pengunjung.",
+        deskripsi: "Kode QR untuk mendownload hasil dari 180 Photobooth langsung dicetak secara instan dan diberikan ke tamu undangan/pengunjung.",
         ilustrasi: "/assets/img/promo/360/advantages/instan.png"
     },
     kamera: {
@@ -328,53 +329,39 @@ const jasas = ref({
 // Data Samples
 const samples = ref({
     satu: {
-        id: "1z22buaWSx-nXxzKygt7ivXLPghp2JfR4"
+        id: "1N_RxTV2SMj5AfjrlTJPvy-eQRAMymDqi"
     },
     dua: {
-        id: "1y2YhHB5HSHNuRIjo31Rmq5X6E_iYOrwl"
+        id: "1o801VKril8WcfJjTDZC38Qbs30VZZmQI"
     },
     tiga: {
-        id: "19wXQTG5XI5N29wAWHN09ZrYUzmHaOyG_"
-    },
-    empat: {
-        id: "1IzqMqvvASD1t7x_MK6LJL8yjCdMUpah0"
-    },
-    lima: {
-        id: "12_19N3i4seWDeNGloUBjvRnSk4C3-v_w"
+        id: "1G_QzTBbwoQQxbED4M6gqpi7DzMfd-ehB"
     },
 })
 
 // Data Equipments
 const equipments = ref({
     satu: {
-        judul: "1 Spinner Setup",
-        deskripsi: "Untuk memutar kamera dan lighting."
+        judul: "10 Camera Array",
+        deskripsi: "Untuk mengambil gambar."
     },
     dua: {
         judul: "1 Lighting Set",
         deskripsi: "Untuk menerangi subjek saat take."
     },
     tiga: {
-        judul: "4 Lighting Background",
-        deskripsi: "Untuk menerangi environment."
-    },
-    empat: {
         judul: "1 Tablet Preview",
         deskripsi: "Untuk menampilkan galeri preview."
     },
-    lima: {
-        judul: "1 GoPro Camera",
-        deskripsi: "Untuk merekam 360 videobooth."
-    },
-    enam: {
+    empat: {
         judul: "1 Laptop/PC",
         deskripsi: "Untuk memproses dan mengupload video."
     },
-    tujuh: {
+    lima: {
         judul: "10+ Props",
         deskripsi: "Sebagai aksesoris pelengkap."
     },
-    delapan: {
+    enam: {
         judul: "3-4 Dedicated Crew",
         deskripsi: "Kru Teknisi, Operator, dan Pengarah gaya."
     },
@@ -385,7 +372,7 @@ const workflows = ref({
     satu: {
         nomor: 1,
         judul: "Persiapan",
-        deskripsi: "Tamu undangan/pengunjung memilih properti yang akan digunakan lalu menaiki 360 Videobooth."
+        deskripsi: "Tamu undangan/pengunjung memilih properti yang akan digunakan lalu memasuki area 180 Photobooth."
     },
     dua: {
         nomor: 2,
@@ -395,12 +382,12 @@ const workflows = ref({
     tiga: {
         nomor: 3,
         judul: "Mulai",
-        deskripsi: "Kamera pada 360 Videobooth mulai berputar dan merekam selama kurang lebih 13 detik."
+        deskripsi: "Kamera pada 180 Photobooth mengambil gambar secara bersamaan."
     },
     empat: {
         nomor: 4,
         judul: "Kode QR",
-        deskripsi: "Setelah selesai, kode QR untuk mendownload hasil video akan langsung dicetak secara instan kemudian diberikan ke tamu undangan/pengunjung yang baru saja mencoba 360 Videobooth."
+        deskripsi: "Setelah selesai, kode QR untuk mendownload hasil video akan langsung dicetak secara instan kemudian diberikan ke tamu undangan/pengunjung yang baru saja mencoba 180 Photobooth."
     },
     lima: {
         nomor: 5,
@@ -418,7 +405,7 @@ const workflows = ref({
 const faqs = ref({
     maxvideo: {
         pertanyaan: "Berapa banyak batas maksimal video?",
-        jawaban: "<b>Unlimited!</b> alias tidak ada batasan maksimal video. Kamu bisa menggunakan 360 Videobooth dengan video sebanyak mungkin. <br> <br> Kami hanya menggunakan tarif per jam. Selama durasi jam masih tersedia, kamu masih bisa menggunakan 360 Videobooth."
+        jawaban: "<b>Unlimited!</b> alias tidak ada batasan maksimal video. Kamu bisa menggunakan 180 Photobooth dengan video sebanyak mungkin. <br> <br> Kami hanya menggunakan tarif per jam. Selama durasi jam masih tersedia, kamu masih bisa menggunakan 180 Photobooth."
     },
     satujam: {
         pertanyaan: "Apakah bisa booking durasi 1 jam saja?",

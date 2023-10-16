@@ -9,41 +9,107 @@
                     </NuxtLink>
                     <div v-if="result">
 
-                        <div v-if="result.file_id">
-                            <div v-if="result.type == 'video'">
-                                <video width="265" height="300" controls class="rounded-xl shadow-xl">
-                                    <source :src="'https://drive.google.com/uc?export=download&id=' + result.file_id"
-                                        type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
+                        <div v-if="result.type === 'photobooth'">
+                            <div v-if="result.file_video_id && result.file_image_id">
+                                <div
+                                    class="grid grid-cols-2 gap-2 bg-neutral-900 border border-neutral-100 rounded-xl text-neutral-100 p-1">
+                                    <div @click="selectedTab = 'video'"
+                                        :class="[selectedTab === 'video' ? 'bg-neutral-100 text-neutral-900' : 'text-neutral-100']"
+                                        class="cursor-pointer transition-all duration-300 ease-in-out rounded-lg px-3 uppercase text-xs flex font-medium py-1">
+                                        <div class="m-auto">
+                                            Video
+                                        </div>
+                                    </div>
+                                    <div @click="selectedTab = 'foto'"
+                                        :class="[selectedTab === 'foto' ? 'bg-neutral-100 text-neutral-900' : 'text-neutral-100']"
+                                        class="cursor-pointer transition-all duration-300 ease-in-out rounded-lg px-3 uppercase text-xs flex font-medium py-1">
+                                        <div class="m-auto">
+                                            Foto
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div v-if="selectedTab === 'video'">
+                                    <video width="265" height="300" controls class="rounded-xl shadow-xl my-10">
+                                        <source
+                                            :src="'https://drive.google.com/uc?export=download&id=' + result.file_video_id"
+                                            type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+
+                                    <a :href="'https://drive.google.com/uc?export=download&id=' + result.file_video_id"
+                                        target="_blank" class="btn  btn-accent btn-wide my-2"><i
+                                            class="ri-download-2-fill ri-lg"></i>
+                                        &nbsp;
+                                        Download
+                                    </a>
+                                </div>
+
+                                <div v-if="selectedTab === 'foto'">
+                                    <img width="265" class="rounded-xl shadow-xl my-10"
+                                        :src="'https://drive.google.com/uc?export=download&id=' + result.file_image_id"
+                                        alt="">
+
+                                    <a :href="'https://drive.google.com/uc?export=download&id=' + result.file_image_id"
+                                        target="_blank" class="btn  btn-accent btn-wide my-2"><i
+                                            class="ri-download-2-fill ri-lg"></i>
+                                        &nbsp;
+                                        Download
+                                    </a>
+                                </div>
                             </div>
-                            <div v-if="result.type == 'photo'">
-                                <img width="265" :src="'https://drive.google.com/uc?export=download&id=' + result.file_id"
-                                    alt="">
+                            <div v-else>
+                                Hasil sedang diproses / dalam antrian proses.
+                                <br>
+                                Tunggu beberapa menit lalu refresh halaman ini.
                             </div>
+
+                            <button v-else @click="reloadPage()" class="btn  btn-accent btn-wide my-2"><i
+                                    class="ri-refresh-line ri-lg"></i>
+                                &nbsp;
+                                Refresh
+                            </button>
                         </div>
+
                         <div v-else>
-                            Hasil sedang diproses / dalam antrian proses.
+
+                            <div v-if="result.file_id">
+                                <div v-if="result.type == 'video'">
+                                    <video width="265" height="300" controls class="rounded-xl shadow-xl">
+                                        <source :src="'https://drive.google.com/uc?export=download&id=' + result.file_id"
+                                            type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div v-if="result.type == 'photo'">
+                                    <img width="265"
+                                        :src="'https://drive.google.com/uc?export=download&id=' + result.file_id" alt="">
+                                </div>
+                            </div>
+                            <div v-else>
+                                Hasil sedang diproses / dalam antrian proses.
+                                <br>
+                                Tunggu beberapa menit lalu refresh halaman ini.
+                            </div>
+
                             <br>
-                            Tunggu beberapa menit lalu refresh halaman ini.
+
+                            <a :href="'https://drive.google.com/uc?export=download&id=' + result.file_id" target="_blank"
+                                v-if="result.file_id" class="btn  btn-accent btn-wide my-2"><i
+                                    class="ri-download-2-fill ri-lg"></i>
+                                &nbsp;
+                                Download
+                            </a>
+
+                            <button v-else @click="reloadPage()" class="btn  btn-accent btn-wide my-2"><i
+                                    class="ri-refresh-line ri-lg"></i>
+                                &nbsp;
+                                Refresh
+                            </button>
+
+                            <br> <br>
                         </div>
 
-                        <br>
-
-                        <a :href="'https://drive.google.com/uc?export=download&id=' + result.file_id" target="_blank"
-                            v-if="result.file_id" class="btn  btn-accent btn-wide my-2"><i
-                                class="ri-download-2-fill ri-lg"></i>
-                            &nbsp;
-                            Download
-                        </a>
-
-                        <button v-else @click="reloadPage()" class="btn  btn-accent btn-wide my-2"><i
-                                class="ri-refresh-line ri-lg"></i>
-                            &nbsp;
-                            Refresh
-                        </button>
-
-                        <br> <br>
                     </div>
 
                     <div v-else>
@@ -106,6 +172,7 @@ import { useRoute } from 'vue-router';
 
 
 const route = useRoute();
+const selectedTab = ref('video');
 
 useHead({
     title: '[ ' + route.params.slug + ' ]',

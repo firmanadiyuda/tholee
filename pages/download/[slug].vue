@@ -15,14 +15,14 @@
                                     class="grid grid-cols-2 gap-2 bg-neutral-900 border border-neutral-100 rounded-xl text-neutral-100 p-1">
                                     <div @click="selectedTab = 'video'"
                                         :class="[selectedTab === 'video' ? 'bg-neutral-100 text-neutral-900' : 'text-neutral-100']"
-                                        class="cursor-pointer transition-all duration-300 ease-in-out rounded-lg px-3 uppercase text-xs flex font-medium py-1">
+                                        class="cursor-pointer transition-all duration-300 ease-in-out rounded-lg px-3 uppercase text-xs flex font-medium py-2">
                                         <div class="m-auto">
                                             Video
                                         </div>
                                     </div>
                                     <div @click="selectedTab = 'foto'"
                                         :class="[selectedTab === 'foto' ? 'bg-neutral-100 text-neutral-900' : 'text-neutral-100']"
-                                        class="cursor-pointer transition-all duration-300 ease-in-out rounded-lg px-3 uppercase text-xs flex font-medium py-1">
+                                        class="cursor-pointer transition-all duration-300 ease-in-out rounded-lg px-3 uppercase text-xs flex font-medium py-2">
                                         <div class="m-auto">
                                             Foto
                                         </div>
@@ -41,7 +41,7 @@
                                         target="_blank" class="btn  btn-accent btn-wide my-2"><i
                                             class="ri-download-2-fill ri-lg"></i>
                                         &nbsp;
-                                        Download
+                                        Download Video
                                     </a>
                                 </div>
 
@@ -54,7 +54,7 @@
                                         target="_blank" class="btn  btn-accent btn-wide my-2"><i
                                             class="ri-download-2-fill ri-lg"></i>
                                         &nbsp;
-                                        Download
+                                        Download Foto
                                     </a>
                                 </div>
                             </div>

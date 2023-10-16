@@ -5,7 +5,7 @@
             <div class="hero-content text-center z-40">
                 <div class="max-w-xl">
                     <NuxtLink to="/">
-                        <img src="/assets/img/logo.png" class="m-auto pb-10 pt-10" alt="">
+                        <img src="/assets/img/logo.png" class="m-auto mb-10 pt-10" alt="">
                     </NuxtLink>
                     <div v-if="result">
 

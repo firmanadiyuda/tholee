@@ -71,41 +71,122 @@
                             </button>
                         </div>
 
-                        <div v-else>
 
-                            <div v-if="result.file_id">
-                                <div v-if="result.type == 'video'">
-                                    <video width="265" height="300" controls class="rounded-xl shadow-xl">
-                                        <source :src="'https://drive.google.com/uc?export=download&id=' + result.file_id"
-                                            type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
+                        <div v-if="result.type === 'wedding'">
+                            <div v-if="result.file_video_id && result.file_image_id">
+                                <div
+                                    class="grid grid-cols-2 gap-2 bg-neutral-900 border border-neutral-100 rounded-xl text-neutral-100 p-1">
+                                    <div @click="selectedTab = 'video'"
+                                        :class="[selectedTab === 'video' ? 'bg-neutral-100 text-neutral-900' : 'text-neutral-100']"
+                                        class="cursor-pointer transition-all duration-300 ease-in-out rounded-lg px-3 uppercase text-xs flex font-medium py-2">
+                                        <div class="m-auto">
+                                            Video
+                                        </div>
+                                    </div>
+                                    <div @click="selectedTab = 'foto'"
+                                        :class="[selectedTab === 'foto' ? 'bg-neutral-100 text-neutral-900' : 'text-neutral-100']"
+                                        class="cursor-pointer transition-all duration-300 ease-in-out rounded-lg px-3 uppercase text-xs flex font-medium py-2">
+                                        <div class="m-auto">
+                                            Foto
+                                        </div>
+                                    </div>
                                 </div>
-                                <div v-if="result.type == 'photo'">
-                                    <img width="265"
-                                        :src="'https://drive.google.com/uc?export=download&id=' + result.file_id" alt="">
+
+                                <div v-if="selectedTab === 'video'">
+                                    <div
+                                        class="rounded-xl border border-neutral-600 bg-neutral-800 shadow-xl shadow-black p-3 mt-10">
+                                        <video width="265" height="300" controls class="rounded-xl shadow-xl">
+                                            <source
+                                                :src="'https://drive.google.com/uc?export=download&id=' + result.file_video_id"
+                                                type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+
+                                        <a :href="'https://drive.google.com/uc?export=download&id=' + result.file_video_id"
+                                            target="_blank" class="btn btn-accent w-full mt-4"><i
+                                                class="ri-download-2-fill ri-lg"></i>
+                                            &nbsp;
+                                            Download Video
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                                <div v-if="selectedTab === 'foto'" class="flex flex-col gap-10 mt-10 mb-24">
+                                    <div v-for="img in result.file_image_id"
+                                        class="rounded-xl border border-neutral-600 bg-neutral-800 shadow-xl shadow-black p-3">
+                                        <img width="265" class="rounded-xl shadow-xl"
+                                            :src="'https://drive.google.com/uc?export=download&id=' + img" alt="">
+
+                                        <a :href="'https://drive.google.com/uc?export=download&id=' + img" target="_blank"
+                                            class="btn btn-accent w-full mt-4"><i class="ri-download-2-fill ri-lg"></i>
+                                            &nbsp;
+                                            Download Foto
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            <div v-else>
+                            <div v-else
+                                class="rounded-xl border border-neutral-600 bg-neutral-800 shadow-xl shadow-black p-5 mx-5 mt-10">
                                 Hasil sedang diproses / dalam antrian proses.
                                 <br>
                                 Tunggu beberapa menit lalu refresh halaman ini.
+                                <br>
+                                <br>
+                                <button @click="reloadPage()" class="btn  btn-accent w-full my-2"><i
+                                        class="ri-refresh-line ri-lg"></i>
+                                    &nbsp;
+                                    Refresh
+                                </button>
                             </div>
 
-                            <br>
+                        </div>
 
-                            <a :href="'https://drive.google.com/uc?export=download&id=' + result.file_id" target="_blank"
-                                v-if="result.file_id" class="btn  btn-accent btn-wide my-2"><i
-                                    class="ri-download-2-fill ri-lg"></i>
-                                &nbsp;
-                                Download
-                            </a>
 
-                            <button v-else @click="reloadPage()" class="btn  btn-accent btn-wide my-2"><i
-                                    class="ri-refresh-line ri-lg"></i>
-                                &nbsp;
-                                Refresh
-                            </button>
+                        <div v-else>
+
+                            <div
+                                class="rounded-xl border border-neutral-600 bg-neutral-800 shadow-xl shadow-black p-3 mt-10">
+
+                                <div v-if="result.file_id">
+                                    <div v-if="result.type == 'video'">
+                                        <video width="265" height="300" controls class="rounded-xl shadow-xl">
+                                            <source
+                                                :src="'https://drive.google.com/uc?export=download&id=' + result.file_id"
+                                                type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+                                    <div v-if="result.type == 'photo'">
+                                        <img width="265"
+                                            :src="'https://drive.google.com/uc?export=download&id=' + result.file_id"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <div v-else
+                                    class="p-2">
+                                    Hasil sedang diproses / dalam antrian proses.
+                                    <br>
+                                    Tunggu beberapa menit lalu refresh halaman ini.
+                                    <br>
+                                    <br>
+                                    <button @click="reloadPage()" class="btn  btn-accent w-full my-2"><i
+                                            class="ri-refresh-line ri-lg"></i>
+                                        &nbsp;
+                                        Refresh
+                                    </button>
+                                </div>
+
+
+                                <a :href="'https://drive.google.com/uc?export=download&id=' + result.file_id"
+                                    target="_blank" v-if="result.file_id" class="btn btn-accent w-full my-2 mt-4"><i
+                                        class="ri-download-2-fill ri-lg"></i>
+                                    &nbsp;
+                                    Download
+                                </a>
+
+
+                            </div>
 
                             <br> <br>
                         </div>

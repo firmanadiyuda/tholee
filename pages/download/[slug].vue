@@ -259,7 +259,7 @@ import { useRoute } from 'vue-router';
 
 
 const route = useRoute();
-const selectedTab = ref('video');
+const selectedTab = ref('foto');
 
 useHead({
     title: '[ ' + route.params.slug + ' ]',

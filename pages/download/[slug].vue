@@ -30,49 +30,56 @@
                                 </div>
 
                                 <div v-if="selectedTab === 'video'">
-                                    <video width="265" height="300" controls class="rounded-xl shadow-xl my-10">
-                                        <source
-                                            :src="'https://drive.google.com/uc?export=download&id=' + result.file_video_id"
-                                            type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
+                                    <div
+                                        class="rounded-xl border border-neutral-600 bg-neutral-800 shadow-xl shadow-black p-3 mt-10">
+                                        <video width="265" height="300" controls class="rounded-xl shadow-xl ">
+                                            <source
+                                                :src="'https://drive.google.com/uc?export=download&id=' + result.file_video_id"
+                                                type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
 
-                                    <a :href="'https://drive.google.com/uc?export=download&id=' + result.file_video_id"
-                                        target="_blank" class="btn  btn-accent btn-wide my-2"><i
-                                            class="ri-download-2-fill ri-lg"></i>
-                                        &nbsp;
-                                        Download Video
-                                    </a>
+                                        <a :href="'https://drive.google.com/uc?export=download&id=' + result.file_video_id"
+                                            target="_blank" class="btn  btn-accent btn-wide mt-5 mb-2"><i
+                                                class="ri-download-2-fill ri-lg"></i>
+                                            &nbsp;
+                                            Download Video
+                                        </a>
+                                    </div>
                                 </div>
 
                                 <div v-if="selectedTab === 'foto'">
-                                    <img width="265" class="rounded-xl shadow-xl my-10"
-                                        :src="'https://drive.google.com/uc?export=download&id=' + result.file_image_id"
-                                        alt="">
+                                    <div
+                                        class="rounded-xl border border-neutral-600 bg-neutral-800 shadow-xl shadow-black p-3 mt-10 mb-24">
+                                        <img width="265" class="rounded-xl shadow-xl"
+                                            :src="'https://drive.google.com/uc?export=download&id=' + result.file_image_id"
+                                            alt="">
 
-                                    <a :href="'https://drive.google.com/uc?export=download&id=' + result.file_image_id"
-                                        target="_blank" class="btn  btn-accent btn-wide my-2"><i
-                                            class="ri-download-2-fill ri-lg"></i>
-                                        &nbsp;
-                                        Download Foto
-                                    </a>
+                                        <a :href="'https://drive.google.com/uc?export=download&id=' + result.file_image_id"
+                                            target="_blank" class="btn  btn-accent btn-wide mt-5 mb-2"><i
+                                                class="ri-download-2-fill ri-lg"></i>
+                                            &nbsp;
+                                            Download Foto
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            <div v-else>
+                            <div v-else class="p-2">
                                 Hasil sedang diproses / dalam antrian proses.
                                 <br>
                                 Tunggu beberapa menit lalu refresh halaman ini.
+                                <br>
+                                <br>
+                                <button @click="reloadPage()" class="btn  btn-accent w-full my-2"><i
+                                        class="ri-refresh-line ri-lg"></i>
+                                    &nbsp;
+                                    Refresh
+                                </button>
                             </div>
-
-                            <button v-else @click="reloadPage()" class="btn  btn-accent btn-wide my-2"><i
-                                    class="ri-refresh-line ri-lg"></i>
-                                &nbsp;
-                                Refresh
-                            </button>
                         </div>
 
 
-                        <div v-if="result.type === 'wedding'">
+                        <div v-else-if="result.type === 'wedding'">
                             <div v-if="result.file_video_id && result.file_image_id">
                                 <div
                                     class="grid grid-cols-2 gap-2 bg-neutral-900 border border-neutral-100 rounded-xl text-neutral-100 p-1">
@@ -163,8 +170,7 @@
                                             alt="">
                                     </div>
                                 </div>
-                                <div v-else
-                                    class="p-2">
+                                <div v-else class="p-2">
                                     Hasil sedang diproses / dalam antrian proses.
                                     <br>
                                     Tunggu beberapa menit lalu refresh halaman ini.

@@ -48,7 +48,21 @@
                                     </div>
                                 </div>
 
-                                <div v-if="selectedTab === 'foto'">
+                                <div v-if="selectedTab === 'foto'" class="flex flex-col gap-10 mt-10 mb-24">
+                                    <div v-for="img in result.file_image_id"
+                                        class="rounded-xl border border-neutral-600 bg-neutral-800 shadow-xl shadow-black p-3">
+                                        <img width="265" class="rounded-xl shadow-xl"
+                                            :src="'https://drive.google.com/uc?export=download&id=' + img" alt="">
+
+                                        <a :href="'https://drive.google.com/uc?export=download&id=' + img" target="_blank"
+                                            class="btn btn-accent w-full mt-4"><i class="ri-download-2-fill ri-lg"></i>
+                                            &nbsp;
+                                            Download Foto
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <!-- <div v-if="selectedTab === 'foto'">
                                     <div
                                         class="rounded-xl border border-neutral-600 bg-neutral-800 shadow-xl shadow-black p-3 mt-10 mb-24">
                                         <img width="265" class="rounded-xl shadow-xl"
@@ -62,7 +76,7 @@
                                             Download Foto
                                         </a>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <div v-else class="p-2">
                                 Hasil sedang diproses / dalam antrian proses.

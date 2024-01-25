@@ -86,7 +86,7 @@
                     <div class="card-body p-0">
                         <div>
                             <video width="265" height="300" controls controlslist="nodownload" class="rounded-xl shadow-xl">
-                                <source :src="'https://drive.google.com/uc?export=download&id=' + sample.id"
+                                <source :src="sample.id"
                                     type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -191,8 +191,9 @@
                             fitur serupa, kami akan berikan harga tersebut pada kamu. <br> <br> Hubungi kami dengan klik
                             tombol dibawah ini. <br> Tenang! mau tanya tanya dulu juga boleh kok, gausah sungkan yaa...
                         </p>
-                        <button @click="hubungiKami('https://wa.me/6289525009655')" class="btn btn-primary shadow-neutral-900/80 shadow-xl"><i
-                                class="ri-whatsapp-line ri-lg"></i> Hubungi
+                        <button @click="hubungiKami('https://wa.me/6289525009655')"
+                            class="btn btn-primary shadow-neutral-900/80 shadow-xl"><i class="ri-whatsapp-line ri-lg"></i>
+                            Hubungi
                             Kami</button>
                     </div>
                 </div>
@@ -277,6 +278,7 @@ onMounted(() => {
 
 
 const voucher = ref("G03-100")
+const storj_link = ref("https://link.storjshare.io/raw/1Ka6CQgHoKoFjjJifSmcwQR6iQFGK44nj34ZwPUCyei8KE4gufEHcP4vF7eDtFAZWmbJuecESY7bifzD3M429XaRRQEJPFFj2Hqwg322HY6WdV79QyXQ48efTQv3iUrJ6pN9GtPA7HdhTc85z2T3ZfuaRBoaq7LF21MQS9uhsNhSaLXo2gxn5Qpf4DgRFz1sQjK7q6FuqWaqkUWJccVhARDnXEXmRR6tX9iSwxmxRSJ46Ug4wC1J5BNt1WPUhRxgYFra8vyWoPCgQvJCE23KHkDLg1icYaszDzUhQsYNaZwJwV8PoV7rAtytgmayQCtX2sYf9k9qrLiLUJxthXpLgU8oJh/tholee-studio/samples/360/")
 
 const alert_enabled = ref(false)
 const query_url = route.query.voucher
@@ -328,19 +330,19 @@ const jasas = ref({
 // Data Samples
 const samples = ref({
     satu: {
-        id: "1z22buaWSx-nXxzKygt7ivXLPghp2JfR4"
+        id: storj_link.value + "1.mp4"
     },
     dua: {
-        id: "1y2YhHB5HSHNuRIjo31Rmq5X6E_iYOrwl"
+        id: storj_link.value + "2.mp4"
     },
     tiga: {
-        id: "19wXQTG5XI5N29wAWHN09ZrYUzmHaOyG_"
+        id: storj_link.value + "3.mp4"
     },
     empat: {
-        id: "1IzqMqvvASD1t7x_MK6LJL8yjCdMUpah0"
+        id: storj_link.value + "4.mp4"
     },
     lima: {
-        id: "12_19N3i4seWDeNGloUBjvRnSk4C3-v_w"
+        id: storj_link.value + "5.mp4"
     },
 })
 

@@ -87,7 +87,7 @@
                     <div class="card-body p-0">
                         <div>
                             <video width="500" height="300" controls controlslist="nodownload" class="rounded-xl shadow-xl">
-                                <source :src="'https://drive.google.com/uc?export=download&id=' + sample.id"
+                                <source :src="sample.id"
                                     type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -278,6 +278,7 @@ onMounted(() => {
 
 
 const voucher = ref("G03-100")
+const storj_link = ref("https://link.storjshare.io/raw/1Ka6CQgHoKoFjjJifSmcwQR6iQFGK44nj34ZwPUCyei8KE4gufEHcP4vF7eDtFAZWmbJuecESY7bifzD3M429XaRRQEJPFFj2Hqwg322HY6WdV79QyXQ48efTQv3iUrJ6pN9GtPA7HdhTc85z2T3ZfuaRBoaq7LF21MQS9uhsNhSaLXo2gxn5Qpf4DgRFz1sQjK7q6FuqWaqkUWJccVhARDnXEXmRR6tX9iSwxmxRSJ46Ug4wC1J5BNt1WPUhRxgYFra8vyWoPCgQvJCE23KHkDLg1icYaszDzUhQsYNaZwJwV8PoV7rAtytgmayQCtX2sYf9k9qrLiLUJxthXpLgU8oJh/tholee-studio/samples/180/")
 
 const alert_enabled = ref(false)
 const query_url = route.query.voucher
@@ -329,13 +330,13 @@ const jasas = ref({
 // Data Samples
 const samples = ref({
     satu: {
-        id: "1N_RxTV2SMj5AfjrlTJPvy-eQRAMymDqi"
+        id: storj_link.value + "1.mp4"
     },
     dua: {
-        id: "1o801VKril8WcfJjTDZC38Qbs30VZZmQI"
+        id: storj_link.value + "2.mp4"
     },
     tiga: {
-        id: "1G_QzTBbwoQQxbED4M6gqpi7DzMfd-ehB"
+        id: storj_link.value + "3.mp4"
     },
 })
 

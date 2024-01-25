@@ -34,12 +34,12 @@
                                         class="rounded-xl border border-neutral-600 bg-neutral-800 shadow-xl shadow-black p-3 mt-10">
                                         <video width="265" height="300" controls class="rounded-xl shadow-xl ">
                                             <source
-                                                :src="'https://drive.google.com/uc?export=download&id=' + result.file_video_id"
+                                                :src="s3_link + result.tag + '/' + result.file_video_id"
                                                 type="video/mp4">
                                             Your browser does not support the video tag.
                                         </video>
 
-                                        <a :href="'https://drive.google.com/uc?export=download&id=' + result.file_video_id"
+                                        <a :href="s3_link + result.tag + '/' + result.file_video_id"
                                             target="_blank" class="btn  btn-accent btn-wide mt-5 mb-2"><i
                                                 class="ri-download-2-fill ri-lg"></i>
                                             &nbsp;
@@ -52,9 +52,9 @@
                                     <div v-for="img in result.file_image_id"
                                         class="rounded-xl border border-neutral-600 bg-neutral-800 shadow-xl shadow-black p-3">
                                         <img width="265" class="rounded-xl shadow-xl"
-                                            :src="'https://drive.google.com/uc?export=download&id=' + img" alt="">
+                                            :src="s3_link + result.tag + '/' + img" alt="">
 
-                                        <a :href="'https://drive.google.com/uc?export=download&id=' + img" target="_blank"
+                                        <a :href="s3_link + result.tag + '/' + img" target="_blank"
                                             class="btn btn-accent w-full mt-4"><i class="ri-download-2-fill ri-lg"></i>
                                             &nbsp;
                                             Download Foto
@@ -66,10 +66,10 @@
                                     <div
                                         class="rounded-xl border border-neutral-600 bg-neutral-800 shadow-xl shadow-black p-3 mt-10 mb-24">
                                         <img width="265" class="rounded-xl shadow-xl"
-                                            :src="'https://drive.google.com/uc?export=download&id=' + result.file_image_id"
+                                            :src="s3_link + result.file_image_id"
                                             alt="">
 
-                                        <a :href="'https://drive.google.com/uc?export=download&id=' + result.file_image_id"
+                                        <a :href="s3_link + result.file_image_id"
                                             target="_blank" class="btn  btn-accent btn-wide mt-5 mb-2"><i
                                                 class="ri-download-2-fill ri-lg"></i>
                                             &nbsp;
@@ -118,12 +118,12 @@
                                         class="rounded-xl border border-neutral-600 bg-neutral-800 shadow-xl shadow-black p-3 mt-10">
                                         <video width="265" height="300" controls class="rounded-xl shadow-xl">
                                             <source
-                                                :src="'https://drive.google.com/uc?export=download&id=' + result.file_video_id"
+                                                :src="s3_link + result.tag + '/' + result.file_video_id"
                                                 type="video/mp4">
                                             Your browser does not support the video tag.
                                         </video>
 
-                                        <a :href="'https://drive.google.com/uc?export=download&id=' + result.file_video_id"
+                                        <a :href="s3_link + result.tag + '/' + result.file_video_id"
                                             target="_blank" class="btn btn-accent w-full mt-4"><i
                                                 class="ri-download-2-fill ri-lg"></i>
                                             &nbsp;
@@ -137,9 +137,9 @@
                                     <div v-for="img in result.file_image_id"
                                         class="rounded-xl border border-neutral-600 bg-neutral-800 shadow-xl shadow-black p-3">
                                         <img width="265" class="rounded-xl shadow-xl"
-                                            :src="'https://drive.google.com/uc?export=download&id=' + img" alt="">
+                                            :src="s3_link + result.tag + '/' + img" alt="">
 
-                                        <a :href="'https://drive.google.com/uc?export=download&id=' + img" target="_blank"
+                                        <a :href="s3_link + result.tag + '/' + img" target="_blank"
                                             class="btn btn-accent w-full mt-4"><i class="ri-download-2-fill ri-lg"></i>
                                             &nbsp;
                                             Download Foto
@@ -173,14 +173,14 @@
                                     <div v-if="result.type == 'video'">
                                         <video width="265" height="300" controls class="rounded-xl shadow-xl">
                                             <source
-                                                :src="'https://drive.google.com/uc?export=download&id=' + result.file_id"
+                                                :src="s3_link + result.tag + '/' + result.file_id"
                                                 type="video/mp4">
                                             Your browser does not support the video tag.
                                         </video>
                                     </div>
                                     <div v-if="result.type == 'photo'">
                                         <img width="265"
-                                            :src="'https://drive.google.com/uc?export=download&id=' + result.file_id"
+                                            :src="s3_link + result.tag + '/' + result.file_id"
                                             alt="">
                                     </div>
                                 </div>
@@ -198,7 +198,7 @@
                                 </div>
 
 
-                                <a :href="'https://drive.google.com/uc?export=download&id=' + result.file_id"
+                                <a :href="s3_link + result.tag + '/' + result.file_id"
                                     target="_blank" v-if="result.file_id" class="btn btn-accent w-full my-2 mt-4"><i
                                         class="ri-download-2-fill ri-lg"></i>
                                     &nbsp;
@@ -274,6 +274,7 @@ import { useRoute } from 'vue-router';
 
 const route = useRoute();
 const selectedTab = ref('foto');
+const s3_link = ref("https://link.storjshare.io/raw/1Ka6CQgHoKoFjjJifSmcwQR6iQFGK44nj34ZwPUCyei8KE4gufEHcP4vF7eDtFAZWmbJuecESY7bifzD3M429XaRRQEJPFFj2Hqwg322HY6WdV79QyXQ48efTQv3iUrJ6pN9GtPA7HdhTc85z2T3ZfuaRBoaq7LF21MQS9uhsNhSaLXo2gxn5Qpf4DgRFz1sQjK7q6FuqWaqkUWJccVhARDnXEXmRR6tX9iSwxmxRSJ46Ug4wC1J5BNt1WPUhRxgYFra8vyWoPCgQvJCE23KHkDLg1icYaszDzUhQsYNaZwJwV8PoV7rAtytgmayQCtX2sYf9k9qrLiLUJxthXpLgU8oJh/tholee-studio/events/")
 
 useHead({
     title: '[ ' + route.params.slug + ' ]',

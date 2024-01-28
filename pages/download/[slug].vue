@@ -39,7 +39,7 @@
                                             Your browser does not support the video tag.
                                         </video>
 
-                                        <a :href="s3_link + result.tag + '/' + result.file_video_id"
+                                        <a :href="s3_link + result.tag + '/' + result.file_video_id + '?download=1'" 
                                             target="_blank" class="btn  btn-accent btn-wide mt-5 mb-2"><i
                                                 class="ri-download-2-fill ri-lg"></i>
                                             &nbsp;
@@ -54,7 +54,7 @@
                                         <img width="265" class="rounded-xl shadow-xl"
                                             :src="s3_link + result.tag + '/' + img" alt="">
 
-                                        <a :href="s3_link + result.tag + '/' + img" target="_blank"
+                                        <a :href="s3_link + result.tag + '/' + img + '?download=1'" target="_blank"
                                             class="btn btn-accent w-full mt-4"><i class="ri-download-2-fill ri-lg"></i>
                                             &nbsp;
                                             Download Foto
@@ -123,7 +123,7 @@
                                             Your browser does not support the video tag.
                                         </video>
 
-                                        <a :href="s3_link + result.tag + '/' + result.file_video_id"
+                                        <a :href="s3_link + result.tag + '/' + result.file_video_id + '?download=1'"
                                             target="_blank" class="btn btn-accent w-full mt-4"><i
                                                 class="ri-download-2-fill ri-lg"></i>
                                             &nbsp;
@@ -139,7 +139,7 @@
                                         <img width="265" class="rounded-xl shadow-xl"
                                             :src="s3_link + result.tag + '/' + img" alt="">
 
-                                        <a :href="s3_link + result.tag + '/' + img" target="_blank"
+                                        <a :href="s3_link + result.tag + '/' + img + '?download=1'" target="_blank"
                                             class="btn btn-accent w-full mt-4"><i class="ri-download-2-fill ri-lg"></i>
                                             &nbsp;
                                             Download Foto
@@ -198,7 +198,7 @@
                                 </div>
 
 
-                                <a :href="s3_link + result.tag + '/' + result.file_id"
+                                <a :href="s3_link + result.tag + '/' + result.file_id + '?download=1'"
                                     target="_blank" v-if="result.file_id" class="btn btn-accent w-full my-2 mt-4"><i
                                         class="ri-download-2-fill ri-lg"></i>
                                     &nbsp;

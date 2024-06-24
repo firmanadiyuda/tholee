@@ -1,15 +1,10 @@
 <template>
     <footer class="footer footer-center p-10 bg-secondary/30 text-primary-content">
         <div>
-            <img width="100px" src="/assets/img/logo.png" alt="">
-            <!-- <p class="font-bold">
-                Photo & Videography
-            </p> -->
-            <!-- <a href="https://www.bridestory.com/tholee-studio" class="pt-2" title="Tholee Studio" target="_blank"
-                rel="dofollow"><img alt="Tholee Studio" width="154" height="40"
-                    src="https://business.bridestory.com/assets/images/badges/trusted/darkpink.png" /></a> -->
+            <!-- <img width="100px" src="/assets/img/logo.png" alt=""> -->
             <KontakModal />
-            <p>Copyright © 2022 - All right reserved</p>
+            <b class="-mb-2">PT Tholee Studio Kreatif</b>
+            <p>Copyright &copy; 2019-{{ new Date().getFullYear() }}. All right reserved</p>
 
 
         </div>

@@ -59,10 +59,8 @@
                                     </li>
                                 </ol>
                             </li>
-                        </ol>
 
-                        <ol class="list-decimal list-inside pb-20 pt-5">
-                            <li class="font-bold">
+                            <li class="font-bold mt-10">
                                 Pembatalan Booking
                                 <ol class="pl-5 list-inside list-[lower-alpha] font-normal">
                                     <li class="py-2">

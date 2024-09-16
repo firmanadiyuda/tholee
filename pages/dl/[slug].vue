@@ -17,10 +17,10 @@
                             </div>
                         </div>
                         <!-- Jika proses sudah selesai, ditandai dengan adanya record file -->
-                        <div v-if="result.file" class="grid gap-10">
-                            <div v-if="result.file.video" class="grid gap-10">
+                        <div v-if="result.file" class="grid gap-10 mt-10">
+                            <div v-if="result.file.video.length > 0" class="grid gap-10">
                                 <div
-                                    class="rounded-xl border border-neutral-600 bg-neutral-800 shadow-xl shadow-black p-3 mt-10">
+                                    class="rounded-xl border border-neutral-600 bg-neutral-800 shadow-xl shadow-black p-3">
                                     <video  controls class="rounded-xl shadow-xl ">
                                         <source :src="s3_link + result.file.video" type="video/mp4">
                                         Your browser does not support the video tag.
@@ -34,7 +34,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div v-if="result.file.image" class="grid gap-10">
+                            <div v-if="result.file.image.length > 0" class="grid gap-10">
                                 <div v-for="img in result.file.image"
                                     class="rounded-xl border border-neutral-600 bg-neutral-800 shadow-xl shadow-black p-3">
                                     <img class="rounded-xl shadow-xl" :src="s3_link + img" alt="">
